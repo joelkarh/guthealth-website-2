@@ -4,8 +4,15 @@ module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
+
   ],
   theme: {
+    screens:{
+      'medium': '595px',
+    },
+    container: {
+      center: true,
+    },
     extend: {
       colors:{
        'darkcream': "#E4E2D3",

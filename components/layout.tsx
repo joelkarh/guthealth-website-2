@@ -9,7 +9,7 @@ function Layout({children,}:{
         <header>
         <Navbar/>
         </header>
-        <main>
+        <main className='container px-4'>
             {children}
         </main>
         {/* {Footer} */}

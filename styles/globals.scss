@@ -35,12 +35,33 @@ a {
 h1{
   font-family: 'Baskerville';
 }
-button{
-  color:#FFF;
-  width: 14.75rem;
-  background-color: #333333;
-}
-.homeIntro{
+
+#hero{
+  button{
+    width: 14.75rem;
+    height: 4rem;
+
+    background-color: #333333;
+  }
+  .__btn-text-1{
+    color:#FFF;
+  }
+  .--arrow-down{
+    margin-left: auto;
+  }
+  .--arrow-up{
+    margin-left: auto;
+  }
+  .__image{
+    max-width: 644px;
+    max-height: 773px;
+  }
+  .__image{
+    img{
+      height: unset !important;
+      width: unset !important;
+    }
+  }
   
 }
 

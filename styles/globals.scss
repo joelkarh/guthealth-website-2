@@ -96,8 +96,15 @@ h1 {
 //     background: black;
 //   }
 // }
+@media only screen and (max-width: 768px) and (min-width: 979px) {
+  #hero {
+    article {
+      margin-top: unset;
+    }
+  }
+}
 
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   #hero {
     article {
       margin-top: 350px;
@@ -105,7 +112,7 @@ h1 {
 
     .__name-box {
       top: 13rem;
-      left: 350px;
+      left: 25%;
 
       img {
         padding-left: 13rem;
@@ -141,7 +148,8 @@ h1 {
       letter-spacing: 0em;
       text-align: left;
     }
-    .__btn-text-1{
+
+    .__btn-text-1 {
       font-family: Oxygen;
       font-size: 24px;
       font-weight: 400;
@@ -151,4 +159,15 @@ h1 {
 
     }
   }
+}
+
+@media (min-width: 1440px) {}
+
+@media (min-width: 2560px) {
+  #hero {
+    .__name-box {
+      left: 30%;
+    }
+  }
+
 }

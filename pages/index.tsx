@@ -16,8 +16,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-        <section id='hero' className='flex flex-col lg:flex-row'>
-        <div className='__name-box hidden lg:block lg:absolute'>
+        <section id='hero' className='flex flex-col xl:flex-row'>
+        <div className='__name-box hidden xl:block xl:absolute'>
                 <span className='__name'> I&apos;m Romy Hugens </span>
                 {/*  eslint-disable-next-line @next/next/no-img-element */}
               <img src="/Vector-arrow.svg" alt="" />
@@ -38,7 +38,7 @@ export default function Home() {
             </span>
           </button>
           </article>
-          <div className='__image relative lg:my-14'>
+          <div className='__image relative xl:my-14'>
             <Image src={hero_image}  className='__image-img object-contain' alt=''/>
           </div>
         </section>

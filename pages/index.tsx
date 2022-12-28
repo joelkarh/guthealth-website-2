@@ -16,10 +16,15 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-        <section id='hero' className=' flex flex-col md:flex-row'>
-          <article className='max-w-screen-medium my-14'>
+        <section id='hero' className='flex flex-col lg:flex-row'>
+        <div className='__name-box hidden lg:block lg:absolute'>
+                <span className='__name'> I&apos;m Romy Hugens </span>
+                {/*  eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/Vector-arrow.svg" alt="" />
+        </div>
+          <article className='my-14'>
               <h1 className='font-semibold text-4xl	'>Transform your life and unleash your potential.</h1>
-              <p className='text-lg	font-normal	leading-7	mt-4'>I &apos; ve helped thousands to create more stable and sustainable life though my life coaching.</p>
+              <p className='text-lg	font-normal	leading-7	my-8'>I&apos;ve helped thousands to create more stable and sustainable life though my life coaching.</p>
               <button className='flex items-center justify-between px-4 mt-8'>
             <span className='__btn-text-1'>Join me</span>
             {/*  eslint-disable-next-line @next/next/no-img-element */}
@@ -33,8 +38,8 @@ export default function Home() {
             </span>
           </button>
           </article>
-          <div className='__image relative'>
-            <Image src={hero_image} fill sizes="(max-width:768px)100vw" alt=''/>
+          <div className='__image relative lg:my-14'>
+            <Image src={hero_image}  className='__image-img object-contain' alt=''/>
           </div>
         </section>
     </Layout>

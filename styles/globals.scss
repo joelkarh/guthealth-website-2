@@ -6,22 +6,26 @@
   font-family: 'oxygen';
   src: url('./mainFont/Oxygen/Oxygen-Regular.ttf');
 }
+
 @font-face {
   font-family: 'Baskerville';
   src: url('./mainFont/Baskervville/Baskervville-Regular.ttf');
 }
+
+$secondary-font: 'Baskerville';
 $primary-bg : #EFEEE8;
 
-*{
+* {
   padding: 0;
   margin: 0;
   font-size: 16px;
 }
+
 html,
 body {
   background-color: $primary-bg;
   box-sizing: border-box;
-  font-family: Oxygen,Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
@@ -32,37 +36,55 @@ a {
 * {
   box-sizing: border-box;
 }
-h1{
+
+h1 {
   font-family: 'Baskerville';
 }
 
-#hero{
-  button{
+.__name-box {
+  max-width: 344px;
+  max-height: 162px;
+}
+
+.__name {
+  font-family: $secondary-font;
+}
+
+#hero {
+  article {
+
+
+    max-width: 595px;
+  }
+
+  button {
     width: 14.75rem;
     height: 4rem;
-
     background-color: #333333;
   }
-  .__btn-text-1{
-    color:#FFF;
+
+  .__btn-text-1 {
+    color: #FFF;
   }
-  .--arrow-down{
+
+  .--arrow-down {
     margin-left: auto;
   }
-  .--arrow-up{
+
+  .--arrow-up {
     margin-left: auto;
   }
-  .__image{
+
+  .__image {
+    display: block;
     max-width: 644px;
     max-height: 773px;
-  }
-  .__image{
-    img{
-      height: unset !important;
-      width: unset !important;
+
+    &>.__image-img {
+      width: 100% !important;
+      height: 100% !important;
     }
   }
-  
 }
 
 // @media (prefers-color-scheme: dark) {
@@ -74,3 +96,59 @@ h1{
 //     background: black;
 //   }
 // }
+
+@media (min-width: 1024px) {
+  #hero {
+    article {
+      margin-top: 350px;
+    }
+
+    .__name-box {
+      top: 13rem;
+      left: 350px;
+
+      img {
+        padding-left: 13rem;
+        padding-top: 2rem;
+      }
+
+      .__name {
+        display: block;
+        transform: rotate(7.05deg);
+        font-family: $secondary-font;
+        font-size: 34px;
+        font-weight: 400;
+        line-height: 36px;
+        letter-spacing: 0em;
+        text-align: center;
+      }
+    }
+
+    h1 {
+      font-family: $secondary-font;
+      font-size: 4rem;
+      font-weight: 600;
+      line-height: 67px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+
+    p {
+      font-family: Oxygen;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 40px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+    .__btn-text-1{
+      font-family: Oxygen;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 40px;
+      letter-spacing: 0em;
+      text-align: left;
+
+    }
+  }
+}

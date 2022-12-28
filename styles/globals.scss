@@ -9,11 +9,28 @@
 
 @font-face {
   font-family: 'Baskerville';
-  src: url('./mainFont/Baskervville/Baskervville-Regular.ttf');
+  src: url('./mainFont/Libre_Baskerville/LibreBaskerville-Regular.ttf');
 }
 
-$secondary-font: 'Baskerville';
+@font-face {
+  font-family: 'BaskervilleI';
+  src: url('./mainFont/Libre_Baskerville/LibreBaskerville-Italic.ttf');
+}
+
+@font-face {
+  font-family: 'BaskervilleB';
+  src: url('./mainFont/Libre_Baskerville/LibreBaskerville-Bold.ttf');
+}
+
+$secondary-font: 'Baskerville',
+sans-serif;
+$baskerItalic: 'BaskvilleI',
+sans-serif;
+$baskerBold:'BaskervilleB',
+sans-serif;
 $primary-bg : #EFEEE8;
+$primary-font-color : #333;
+$secondary-font-color : #efeee8;
 
 * {
   padding: 0;
@@ -26,6 +43,7 @@ body {
   background-color: $primary-bg;
   box-sizing: border-box;
   font-family: Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  line-height: 20px;
 }
 
 a {
@@ -38,7 +56,14 @@ a {
 }
 
 h1 {
-  font-family: 'Baskerville';
+  font-family: $secondary-font;
+}
+
+.navigation {
+  a {
+    font-family: $secondary-font;
+    font-weight: 400;
+  }
 }
 
 .__name-box {
@@ -51,20 +76,23 @@ h1 {
 }
 
 #hero {
+  h1+p {
+    color: $primary-font-color;
+  }
+
   article {
-
-
     max-width: 595px;
   }
 
   button {
     width: 14.75rem;
     height: 4rem;
-    background-color: #333333;
+    background-color: $primary-font-color;
   }
 
   .__btn-text-1 {
-    color: #FFF;
+    color: $secondary-font-color;
+    font-size: 1.125rem;
   }
 
   .--arrow-down {
@@ -86,6 +114,28 @@ h1 {
     }
   }
 }
+.cirkel{
+  padding: 20px 30px;
+  border-radius: 50px;
+  border: 1px solid #333;
+}
+.goals{
+  max-width: 289px;
+  height: auto;
+  h2 , p{
+    color: $primary-font-color;
+  }
+  h2{
+    font-family: $baskerBold;
+    font-size: 2rem;
+    font-weight: 600;
+    
+  }
+  p{
+    font-size: 1.125rem;
+    font-weight: 400;
+  }
+}
 
 // @media (prefers-color-scheme: dark) {
 //   html {
@@ -105,6 +155,74 @@ h1 {
 }
 
 @media (min-width: 1280px) {
+  .navigation {
+
+    .arrow {
+      display: flex;
+      align-items: center;
+      padding-left: 1rem;
+
+      a {
+        font-family: oxygen, sans-serif;
+      }
+    }
+
+    .arrow-cta {
+      margin-left: 3rem;
+
+      .__arrowUp {
+        // transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+        width: 1rem;
+        border: .5px solid #333;
+        position: absolute;
+        right: 22px;
+        top: 40px;
+        transform: translate3d(3px, -6px, 0px) rotateX(45deg) rotateY(45deg)rotateZ(35deg);
+      }
+
+      .__arrowMiddle {
+        position: absolute;
+        width: 2.375rem;
+        border: .5px solid $primary-font-color;
+      }
+
+      .__arrowDown {
+        // display: hidden;
+        position: absolute;
+        width: 1rem;
+        border: .5px solid #333;
+        right: 22px;
+        top: 40px;
+        transform: translate3d(2px, 6px, 0px) rotateX(45deg) rotateY(145deg) rotateZ(30deg);
+      }
+    }
+
+    width: 604px;
+    justify-content: flex-start;
+    margin-right: 100px;
+
+    ul {
+      width: 100%;
+      justify-content: flex-start;
+      align-items: center;
+      position: relative;
+
+      .line {
+        height: 100%;
+        border: 0.5px solid;
+        border-color: #333;
+      }
+
+      li {
+        padding-right: 2rem;
+
+        img {
+          width: 2.4rem;
+        }
+      }
+    }
+  }
+
   #hero {
     article {
       margin-top: 350px;
@@ -123,11 +241,10 @@ h1 {
         display: block;
         transform: rotate(7.05deg);
         font-family: $secondary-font;
-        font-size: 34px;
+        font-size: 2rem;
         font-weight: 400;
-        line-height: 36px;
-        letter-spacing: 0em;
-        text-align: center;
+        line-height: 32px;
+        color: $primary-font-color;
       }
     }
 
@@ -135,23 +252,23 @@ h1 {
       font-family: $secondary-font;
       font-size: 4rem;
       font-weight: 600;
-      line-height: 67px;
+      line-height: 115%;
       letter-spacing: 0em;
       text-align: left;
+      color: $primary-font-color;
     }
 
     p {
-      font-family: Oxygen;
+      font-family: Oxygen, sans-serif;
       font-size: 24px;
       font-weight: 400;
-      line-height: 40px;
+      line-height: 165%;
       letter-spacing: 0em;
       text-align: left;
     }
 
     .__btn-text-1 {
       font-family: Oxygen;
-      font-size: 24px;
       font-weight: 400;
       line-height: 40px;
       letter-spacing: 0em;

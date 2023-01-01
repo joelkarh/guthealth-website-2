@@ -22,15 +22,16 @@
   src: url('./mainFont/Libre_Baskerville/LibreBaskerville-Bold.ttf');
 }
 
-$secondary-font: 'Baskerville',
+$baskerville: 'Baskerville',
 sans-serif;
-$baskerItalic: 'BaskvilleI',
+$baskerItalic: 'BaskervilleI',
 sans-serif;
 $baskerBold:'BaskervilleB',
 sans-serif;
+$oxygen: 'oxygen', sans-serif;
 $primary-bg : #EFEEE8;
 $primary-font-color : #333;
-$secondary-font-color : #efeee8;
+$baskerville-color : #efeee8;
 
 * {
   padding: 0;
@@ -56,12 +57,12 @@ a {
 }
 
 h1 {
-  font-family: $secondary-font;
+  font-family: $baskerville;
 }
 
 .navigation {
   a {
-    font-family: $secondary-font;
+    font-family: $baskerville;
     font-weight: 400;
   }
 }
@@ -72,7 +73,7 @@ h1 {
 }
 
 .__name {
-  font-family: $secondary-font;
+  font-family: $baskerville;
 }
 
 #hero {
@@ -91,7 +92,7 @@ h1 {
   }
 
   .__btn-text-1 {
-    color: $secondary-font-color;
+    color: $baskerville-color;
     font-size: 1.125rem;
   }
 
@@ -114,26 +115,73 @@ h1 {
     }
   }
 }
-.cirkel{
-  padding: 20px 30px;
-  border-radius: 50px;
-  border: 1px solid #A2A1A0;
-}
-.goals{
-  max-width: 289px;
-  height: auto;
-  h2 , p{
+
+#__goals {
+  position: relative;
+  text-align: center;
+
+  h1,
+  p {
+    font-weight: 400;
+  }
+  & p:first-of-type{
+    font-family: $oxygen;
+    font-size: 1rem;
+    line-height: 1.65rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+    font-family: $baskerville;
+    line-height: 2.26rem;
+  }
+
+  h1,
+  h2,
+  p {
     color: $primary-font-color;
   }
-  h2{
-    font-family: $baskerBold;
-    font-size: 2rem;
-    font-weight: 600;
-    
+
+  .__goals-box {
+    max-width: 289px;
+    height: auto;
+
+    h2 {
+      font-family: $baskerBold;
+      font-size: 1.375rem;
+      Line-height: 23px Line;
+      font-weight: 600;
+
+    }
+
+    p {
+      font-size: 1rem;
+      Line-height: 26px;
+      Line-height: 165%;
+    }
   }
-  p{
-    font-size: 1.125rem;
-    font-weight: 400;
+
+  .__cirkelBox {
+    width: 72px;
+    height: 72px;
+    border-radius: 50px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #A2A1A0;
+    background-color: #efeee8;
+    z-index: 1;
+  }
+
+  .__cirkelBox-cirkel {
+    position: absolute;
+    font-family: $baskerville;
+    font-size: 2rem;
+    font-weight: 100;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 
@@ -146,17 +194,16 @@ h1 {
 //     background: black;
 //   }
 // }
-@media only screen and (max-width: 768px) and (min-width: 979px) {
-  #hero {
-    article {
-      margin-top: unset;
-    }
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  #__goals {
+    margin-top: 25vw;
+    
   }
+
 }
 
 @media (min-width: 1280px) {
   .navigation {
-
     .arrow {
       display: flex;
       align-items: center;
@@ -240,7 +287,7 @@ h1 {
       .__name {
         display: block;
         transform: rotate(7.05deg);
-        font-family: $secondary-font;
+        font-family: $baskerville;
         font-size: 2rem;
         font-weight: 400;
         line-height: 32px;
@@ -249,7 +296,7 @@ h1 {
     }
 
     h1 {
-      font-family: $secondary-font;
+      font-family: $baskerville;
       font-size: 4rem;
       font-weight: 600;
       line-height: 115%;
@@ -274,6 +321,40 @@ h1 {
       letter-spacing: 0em;
       text-align: left;
 
+    }
+  }
+
+  #__goals {
+    position: relative;
+    h1{
+      font-size: 2.75rem;
+      line-height: 2.9rem;
+    }
+    p:first-of-type{
+      font-size: 1.375rem;
+      line-height: 2.26rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.125rem;
+    }
+
+    .__cirkelBox-cirkel-lineprogress {
+      position: absolute;
+      left: 0%;
+      top: 52%;
+      right: 0%;
+      bottom: auto;
+      z-index: 0;
+      width: 65%;
+      height: 1px;
+      margin-right: auto;
+      margin-left: auto;
+      border: 1px solid #a1a19f;
     }
   }
 }

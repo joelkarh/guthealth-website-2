@@ -24,17 +24,30 @@ function Goals() {
         
     return (
     <>
-        <section className='my-16 max-w-7xl	flex justify-center xl:flex-row xl:justify-start flex-col'>
+        <section id='__goals' className='my-16 xl:py-16 max-w-7xl 	'>
+            <div className='my-10 max-w-4xl m-auto'>
+            <h1 >So... how does it actually work?</h1>
+            <p className='py-6'>
+            On our journey, I will teach you different exercises and techniques so you can create the life you deserve. Below are only some of them.
+            </p>
+            </div>
+            
+            <div className='flex justify-center xl:flex-row xl:justify-start flex-col'>
             {data.length > 0 ? data.map(({id,number,title,description})=>(
             <>
-                <article key={id} className='text-center goals m-auto my-10 '>
-                <span className='cirkel'>{number}</span>
+                <article key={id} className='text-center __goals-box m-auto my-10 '>
+                    <div className='__cirkelBox'> 
+                        <span className='__cirkelBox-cirkel'>{number}
+                        </span>
+                    </div>
                 <h2 className='my-8 pt-4'>{title}</h2>
                 <p>{description}</p>
                 </article>
             </>
-            )):'nothing'}
             
+            )):'nothing'}
+            </div>
+            <div className='__cirkelBox-cirkel-lineprogress'></div>
         </section>
     </>
 )

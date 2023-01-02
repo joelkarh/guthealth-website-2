@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Layout from '../components/layout'
 import Goals from '../components/goals'
 import Hero from '../components/hero'
+import Truths from '../components/truths'
 
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       </Head>
         <Hero/>
         <Goals/>
+        <Truths/>
     </Layout>
   )
 }

@@ -44,7 +44,7 @@ html,
 body {
   background-color: $primary-bg;
   box-sizing: border-box;
-  font-family: Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: $oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 20px;
 }
 
@@ -195,6 +195,39 @@ h1 {
   .__truth-image-wrapper {
     max-width: 43.25rem;
     height: auto;
+  }
+  h3:first-of-type{
+    font-family: $baskerville;
+    font-weight: 400;
+    font-size: 1.75rem;
+    line-height: 2.275rem;
+  }
+  h3 p:first-of-type{
+    font-weight: 400
+  }
+  p:first-of-type{
+    line-height: 1.65rem;
+  }
+  div.__truth-box{
+   
+    p{
+      line-height: 1.65rem;
+    }
+    hr{
+      max-width: 378px ;
+      // display: block;
+       border-top: none;
+       border-left: none;
+       border-right: none;
+      border: .2px solid $primary-font-color;
+      background-color: #333;
+      opacity: .9;
+    }
+  }
+  h4{
+    font-weight: 700;
+    font-size: 0.875rem;
+    line-height: 1.44rem;
   }
 }
 
@@ -376,6 +409,9 @@ h1 {
     }
   }
 }
+
+
+
 
 @media (min-width: 1440px) {}
 

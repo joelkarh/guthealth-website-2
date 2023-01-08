@@ -1,4 +1,9 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme')
+let containerScreens = Object.assign({}, defaultTheme.screens)
+
+// Delete the 2xl breakpoint from the object
+delete containerScreens['2xl']
 
 module.exports = {
   content: [
@@ -10,6 +15,7 @@ module.exports = {
   
     container: {
       center: true,
+      screens: containerScreens,
     },
     extend: {
       colors:{

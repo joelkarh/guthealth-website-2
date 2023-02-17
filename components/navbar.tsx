@@ -1,16 +1,25 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link'
 import styles from '../styles/Home.module.scss'
+import { useState } from 'react'
 
 function Navbar() {
+  //menu navigation
+  const [menu , setMenu] = useState(true)
+  //menu showing or not showing
+  const showMenu = () => {
+    setMenu(!menu)
+    console.log(menu);
+  }
+
   return (
     <>
-    <div className='flex justify-between pr-5 pl-5 overflow-hidden'>
+    <div className='flex justify-between xl:pr-5 xl:pl-5 overflow-hidden'>
       <Link href="/" className='pointer'>
         <img src={'/RH-min.svg'} className={`${styles.Brand} `} alt=''/>
       </Link>
-        <img src={'/navbar.svg'} className={`${styles.Menu} xl:hidden`} alt=''/>
-        <nav className='hidden navigation xl:flex'>
+        <img onClick={showMenu} src={'/navbar.svg'} className={`${styles.Menu} xl:hidden`} alt=''/>
+        <nav className={`${menu ? `hidden` : 'block'}  navigation xl:flex`}>
           <ul className='flex'>
             <li>
               <Link href={`/`}>About me</Link>
@@ -42,3 +51,4 @@ function Navbar() {
 }
 
 export default Navbar
+

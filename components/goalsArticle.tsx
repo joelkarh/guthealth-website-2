@@ -29,7 +29,7 @@ function GoalsArticle() {
                         <span className='__cirkelBox-cirkel'>{number}
                         </span>
                     </div>
-                <h2 className='my-8 pt-4'>{title}</h2>
+                <h2 className='my-4 py-2 xl:my-8 xl:pt-4'>{title}</h2>
                 <p>{description}</p>
                 </article>
             )):'nothing'}

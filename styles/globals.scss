@@ -33,6 +33,7 @@ sans-serif;
 $primary-bg : #EFEEE8;
 $primary-font-color : #333;
 $baskerville-color : #efeee8;
+$bg-color: #e4e2d3;
 
 * {
   padding: 0;
@@ -78,7 +79,6 @@ h1 {
 }
 
 #CTA {
-
   width: 14.75rem;
   height: 4rem;
   background-color: $primary-font-color;
@@ -190,64 +190,68 @@ h1 {
     transform: translate(-50%, -50%);
   }
 }
-
-#truth {
-  .__truth-image-wrapper {
-    max-width: 43.25rem;
-    height: auto;
+#truth{
+  .truth_article{
+    padding: 1rem;
   }
-  h3:first-of-type{
+  h3{
     font-family: $baskerville;
-    font-weight: 400;
+    font-style: normal;
     font-size: 1.75rem;
-    line-height: 2.275rem;
+    font-weight: 400;
+    line-height: 2.25rem;
+    color: $primary-font-color;
+    padding: 1rem 0;
+    margin-top: 3rem
   }
-  h3 p:first-of-type{
-    font-weight: 400
-  }
-  p:first-of-type{
-    line-height: 1.65rem;
-  }
-  div.__truth-box{
-   
-    p{
-      line-height: 1.65rem;
-    }
-    hr{
-      max-width: 378px ;
-      // display: block;
-       border-top: none;
-       border-left: none;
-       border-right: none;
-      border: .2px solid $primary-font-color;
-      background-color: #333;
-      opacity: .9;
-    }
+  .truth_article_2{
+    font-family: $oxygen;
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.625rem;
+    color: rgba(51, 51, 51, 0.9);
+    padding: 1.5rem 0;
+    
   }
   h4{
+    font-family: $oxygen;
+    font-style: normal;
     font-weight: 700;
-    font-size: 0.875rem;
-    line-height: 1.44rem;
+    font-size: .875rem;
+    line-height: 1.437rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $primary-font-color;
+    padding: 1rem 0;
+  }
+  .truth_p{
+    font-family: $oxygen;
+    font-size: 1rem;
+    line-height: 1.65rem;
+    color: $primary-font-color;
+    font-weight: 400;
+    position: relative;
+    padding: 1rem 0;
+  }
+  p.truth_p::after{
+    content: '';
+    position: absolute;
+    height: 1.5px;
+    bottom: -4px; 
+    margin:  auto 0;
+		left: 0;
+    right: 0;
+    background-color: $primary-font-color;
   }
 }
-
-// @media (prefers-color-scheme: dark) {
-//   html {
-//     color-scheme: dark;
-//   }
-//   body {
-//     color: white;
-//     background: black;
-//   }
-// }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   #__goals {
     margin-top: 25vw;
 
   }
-
 }
-
+//
 @media (min-width: 1280px) {
   .navigation {
     .arrow {
@@ -259,7 +263,6 @@ h1 {
         font-family: oxygen, sans-serif;
       }
     }
-
     .arrow-cta {
       margin-left: 3rem;
 
@@ -289,17 +292,14 @@ h1 {
         transform: translate3d(2px, 6px, 0px) rotateX(45deg) rotateY(145deg) rotateZ(30deg);
       }
     }
-
     width: 604px;
     justify-content: flex-start;
     margin-right: 100px;
-
     ul {
       width: 100%;
       justify-content: flex-start;
       align-items: center;
       position: relative;
-
       .line {
         height: 100%;
         border: 0.5px solid;
@@ -315,7 +315,6 @@ h1 {
       }
     }
   }
-
   #hero {
     article {
       margin-top: 350px;
@@ -362,7 +361,6 @@ h1 {
 
 
   }
-
   #CTA {
     .__btn-text-1 {
       font-family: Oxygen;
@@ -372,7 +370,6 @@ h1 {
       text-align: left;
     }
   }
-
   #__goals {
     position: relative;
 
@@ -409,12 +406,9 @@ h1 {
     }
   }
 }
-
-
-
-
+//
 @media (min-width: 1440px) {}
-
+//
 @media (min-width: 2560px) {
   #hero {
     .__name-box {

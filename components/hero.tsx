@@ -5,7 +5,7 @@ import Button from './button'
 
 function Hero() {
     return ( <> 
-    <section id='hero' className='flex flex-col xl:flex-row xl:pt-4'>
+    <section id='hero' className=' container px-4 flex flex-col xl:flex-row xl:pt-4'>
         <div className='__name-box hidden xl:block xl:absolute'>
             <span className='__name'>
                 I&apos;m Romy Hugens

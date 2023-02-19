@@ -35,6 +35,7 @@ $primary-font-color : #333;
 $baskerville-color : #efeee8;
 $bg-color: #e4e2d3;
 
+
 * {
   padding: 0;
   margin: 0;
@@ -61,11 +62,40 @@ a {
 h1 {
   font-family: $baskerville;
 }
+.bg-color-beige{
+  background-color: #e4e2d3;
+}
+.arrow{
 
+  width: 51px;
+  margin-right: 1.2rem;
+
+}
 .navigation {
   a {
     font-family: $baskerville;
     font-weight: 400;
+  }
+}
+.navigation-mobile-on{
+  background-color: #e4e2d3;
+  position: absolute;
+  display: block;
+  top:0;
+  left:0;
+  right: 0;
+  width: 100%;
+  transform: translateY(0px) translateX(0px);
+  transition: transform 400ms ease 0s;
+  li{
+    a{
+      font-size: 1rem;
+      color: #222222;
+      line-height: 1.25rem;
+        color: #222222;
+        text-align: left;
+        white-space: nowrap;
+    }
   }
 }
 
@@ -245,12 +275,66 @@ h1 {
     background-color: $primary-font-color;
   }
 }
+.truth-qoute{
+  background-color: $bg-color;
+  width: 100%;
+  p{
+    font-family: $baskerville;
+    font-size: 1.75rem;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: condensed;
+    line-height: 1.68rem;
+    color: #333;
+  }
+  span{
+    line-height: 1.625rem;
+    font-size: 1rem;
+    color: rgba(51, 51, 51, 0.8);
+    
+  }
+  .sun{
+    margin-left: auto;
+  }
+  .qoute{
+    max-width: 84.5rem;
+  }
+}
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   #__goals {
     margin-top: 25vw;
-
+  }
+  #truth{
+    article{
+      display: flex;
+      width: 100%;
+    }
+  }
+  .truth_article-img{
+    width: 50%;
+  }
+  .truth_article{
+    width: 50%;
+  }
+  .truth-qoute{
+    z-index: 9;
+    p{
+      font-size: 5rem;
+      font-family: $baskerville;
+      font-weight: 400;
+      font-style: normal;
+      line-height: 4.875rem;
+    }
+    span{
+      font-size: 1.375rem;
+      line-height: 2.25rem;
+      font-weight: 400;
+      font-style: normal;
+    }
+    bottom: -54rem;
   }
 }
+
 //
 @media (min-width: 1280px) {
   .navigation {
@@ -405,6 +489,41 @@ h1 {
       border: 1px solid #a1a19f;
     }
   }
+  #truth{
+    article{
+      display: flex;
+      width: 100%;
+    }
+    h3{
+      margin-top: unset;
+    }
+    .truth_article-img{
+      width: auto;
+    }
+    .truth_article{
+      width: 561px;
+      margin-left: 2rem;
+    }
+    
+  }
+  .truth-qoute{
+    p{
+      font-size: 5rem;
+      font-family: $baskerville;
+      font-weight: 400;
+      font-style: normal;
+      line-height: 4.875rem;
+    }
+    span{
+      font-size: 1.375rem;
+      line-height: 2.25rem;
+      font-weight: 400;
+      font-style: normal;
+    }
+    bottom: -40rem;
+    z-index: 9;
+  }
+  
 }
 //
 @media (min-width: 1440px) {}
@@ -415,5 +534,15 @@ h1 {
       left: 30%;
     }
   }
+  .truth_article{
+    width: 561px;
+    margin-left: 2rem;
+  }
+  .truth-qoute{
+    .qoute{
+      max-width: unset;
+    }
+  }
+  
 
 }

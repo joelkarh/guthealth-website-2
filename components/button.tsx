@@ -1,18 +1,28 @@
 import React from 'react'
+import { IconContext } from "react-icons";
+import {CgArrowLongRight} from "react-icons/cg";
 
-function Button() {
+//props 
+type Props = {
+  text: string;
+};
+function Button({text}:Props) {
+  
   return (
     <button id='CTA' className='flex items-center justify-between px-4 mt-8'>
-                <span className='__btn-text-1'>Let&apos;s call</span>
+                <span className='__btn-text-1'>{text}</span>
                 {/*  eslint-disable-next-line @next/next/no-img-element */}
-                <span className='relative'>
-                    {/*eslint-disable-next-line @next/next/no-img-element */}
-                    <img src="/arrow_up.svg" alt="" className='--arrow-up'/> {/*eslint-disable-next-line @next/next/no-img-element */}
-                    <img src="/CTX_line.svg" alt=""/> {/*eslint-disable-next-line @next/next/no-img-element */}
-                    <img src="/arrow_down.svg" alt="" className='--arrow-down'/>
-                </span>
+          <IconContext.Provider value={{ color: "white", className: "arrow", size:"2.5rem" }}> 
+                          <div className=''>
+                          <CgArrowLongRight />
+                          </div>
+          </IconContext.Provider>          
     </button>
   )
+  
 }
+export default Button;
 
-export default Button
+
+
+

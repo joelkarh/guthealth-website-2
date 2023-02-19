@@ -18,7 +18,7 @@ function Hero() {
             <p className='text-lg	font-normal	leading-7	my-8'>I&apos;ve helped thousands to
                 create more stable and sustainable life though my life coaching.
             </p>
-            <Button/>
+            <Button text="Let's call"/>
         </article>
         <div className='__image relative xl:my-14 mx-auto xl:mx-0'>
             <Image src={hero_image} className='__image-img object-contain' alt=''/>

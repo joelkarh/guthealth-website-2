@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
-import TruthImage from '../public/imagewithfilter.png'
+import qoute from "./../public/qoutes.svg"
+import sun from "./../public/sun.svg"
 import Button from './button'
 import style from './../styles/Home.module.scss'
 
@@ -30,10 +31,10 @@ function Truths() {
         ]
     }
     return ( 
-    <> 
-    <section id='truth' className='relative'>
+    <div className='relative '> 
+    <section id='truth' className='mx-auto xl: z-10 relative'>
         <article className=''>
-            <div className=''>
+            <div className='truth_article-img'>
                 <Image alt='' width={692} height={919} src='/imagewithfilter.png' /> 
             </div>
         <div className='truth_article'>
@@ -51,12 +52,25 @@ function Truths() {
                     ))}
             </div>
             <div className='mt-16'>
-            <Button/>
+            <Button text="Contact me"/>
             </div>
         </div>
         </article>
     </section> 
-</>
+    <section  className='absolute truth-qoute mt-8 lg:mt-0 p-4 '>
+            <article className='relative'>
+                <Image src={sun} alt="" width={275.5} height={162.5} className='sun hidden lg:block mr-4'/>
+                <Image src={qoute} alt='' width={51} height={36} className='my-8 '/>
+                <div className='qoute'>
+                <p className=''>
+                It &apos;s not the road taken but the road not taken that makes all the difference.
+                </p>
+                <span className='my-6 block'>Mark Twain : The Story of the Fox</span>
+                </div>
+                
+            </article>
+        </section>
+</div>
 )
 }
 

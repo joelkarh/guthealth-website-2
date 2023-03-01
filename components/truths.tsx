@@ -33,7 +33,7 @@ function Truths() {
     return ( 
     <div className='relative '> 
     <section id='truth' className='mx-auto xl: z-10 relative'>
-        <article className=''>
+        <article className='lg:container'>
             <div className='truth_article-img'>
                 <Image alt='' width={692} height={919} src='/imagewithfilter.png' /> 
             </div>
@@ -57,7 +57,8 @@ function Truths() {
         </div>
         </article>
     </section> 
-    <section  className='absolute truth-qoute mt-8 lg:mt-0 p-4 '>
+    {/* abolute is gone */}
+    <section  className=' truth-qoute mt-8 lg:mt-0 p-4 '>
             <article className='relative'>
                 <Image src={sun} alt="" width={275.5} height={162.5} className='sun hidden lg:block mr-4'/>
                 <Image src={qoute} alt='' width={51} height={36} className='my-8 '/>

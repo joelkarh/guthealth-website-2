@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 import Goals from '../components/goals'
 import Hero from '../components/hero'
 import Truths from '../components/truths'
-import Quote from '../components/quote'
+import TODO from '../components/toDo'
 
 
 export default function Home() {
@@ -18,7 +18,7 @@ export default function Home() {
         <Hero/>
         <Goals/>
         <Truths/>
-        <Quote/>
+        <TODO/>
 
     </Layout>
   )

@@ -179,7 +179,7 @@ h1 {
   }
 
   .__goals-box {
-    max-width: 289px;
+    max-width: 400px;
     height: auto;
 
     h2 {
@@ -300,18 +300,125 @@ h1 {
     max-width: 84.5rem;
   }
 }
+
+#Todo{
+  h1{
+    font-family: $baskerville;
+    font-style: normal;
+    font-size: 1.75rem;
+    font-weight: 400;
+    line-height: 2.25rem;
+    color: $primary-font-color;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    margin: auto;
+    max-width: 334px;
+    text-align: center;
+  }
+
+  p{
+    font-family: $oxygen;
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.625rem;
+    color: rgba(51, 51, 51, 0.9);
+    text-align: center;
+    max-width: 343px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .__Todo_btn-box{
+    background-color: $bg-color;
+    max-width: 343px;
+    height: 56px;
+    border-radius: 50px;
+    margin: 1.5rem auto; 
+  }
+  .__Todo-btn{
+    width: 110px;
+    height: 44px;
+    font-family: 'Baskerville';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 165%;
+  }
+  .__Todo-btn-clicked{
+    background-color: #222222;
+    border-radius: 70px;
+    color: $baskerville-color;
+  }
+  .__Todo_article{
+    text-align: center;
+    h2{
+      font-family: $baskerville;
+      font-size: 1.375rem;
+      color: #333;
+      font-weight: 600;
+      line-height: 23px;
+    }
+    p{
+      font-family: $oxygen;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 26px;
+    }
+    blockquote{
+      font-family: $baskerville;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1rem;
+      max-width: 331px;
+      margin: 1rem auto;
+    }
+    address{
+      font-family: $baskerville;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 105%;
+    }
+    max-width: 343px;
+    height: 450px;
+    background-color: $bg-color;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem 0;
+  }
+  .__Todo_article-hide{
+    display: none;
+  }
+  .__Todo_article-qoute{
+    
+    .__Todo_article-qoute-qoute{
+      position: relative;
+      z-index: 9;
+      background-color: #e4e2d3;
+    }
+    .__Todo_article-qoute-line{
+      position: absolute;
+      bottom: 50%;
+      top: 50%;
+    }
+    
+  }
+}
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   #__goals {
     margin-top: 25vw;
   }
   #truth{
     article{
+      
       display: flex;
       width: 100%;
     }
   }
   .truth_article-img{
     width: 50%;
+    position: absolute;
   }
   .truth_article{
     width: 50%;
@@ -332,6 +439,62 @@ h1 {
       font-style: normal;
     }
     bottom: -54rem;
+  }
+  #Todo{
+    h1{
+      max-width: unset;
+      font-size: 2.75rem;
+      line-height: 2.875rem;
+      font-weight: 400;
+    }
+
+    p{
+      font-size: 1.375rem;
+      max-width: 44.8125rem;
+    }
+    .__Todo_btn-box{
+      max-width: 37.25rem;
+      margin-bottom: 3rem;
+      margin-top: 3rem;
+    }
+    .__Todo-btn{
+      width: 184px ;
+      font-size: 1.125rem;
+    }
+    .__Todo_article{
+      .__Todo_box{
+        max-width: 556px;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        
+        
+      }
+      blockquote{
+        font-family: $baskerville;
+        font-size: 1.75rem;
+        max-width: 556px;
+        line-height: 29.4px;
+        font-weight: 200;
+        font-style:'';
+        }
+        .__Todo-border{
+          border: 4rem solid $primary-font-color;
+          background-image: url('/public/filter.png') ;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      padding: unset;  
+      max-width: 1352px;
+      height: auto;
+      h2{
+        font-size: 2rem;
+      }
+      p{
+        font-size: 1.125rem;
+      }
+    }
   }
 }
 
@@ -499,10 +662,11 @@ h1 {
     }
     .truth_article-img{
       width: auto;
+      position: absolute;
     }
     .truth_article{
       width: 561px;
-      margin-left: 2rem;
+      margin-left: auto;
     }
     
   }
@@ -522,6 +686,57 @@ h1 {
     }
     bottom: -40rem;
     z-index: 9;
+  }
+  #Todo{
+    h1{
+      max-width: unset;
+      font-size: 2.75rem;
+      line-height: 2.875rem;
+      font-weight: 400;
+    }
+
+    p{
+      font-size: 1.375rem;
+      max-width: 44.8125rem;
+    }
+    .__Todo_btn-box{
+      max-width: 37.25rem;
+      margin-bottom: 3rem;
+      margin-top: 3rem;
+    }
+    .__Todo-btn{
+      width: 184px ;
+      font-size: 1.125rem;
+    }
+    .__Todo_article{
+      .__Todo_box{
+        max-width: 556px;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        
+      }
+      blockquote{
+        font-family: $baskerville;
+        font-size: 1.75rem;
+        max-width: 556px;
+        line-height: 29.4px;
+        font-weight: 200;
+        font-style:'';
+        }
+        .__Todo-border{
+          border: 4rem solid $primary-font-color;
+        }
+      padding: unset;  
+      max-width: 1352px;
+      height: auto;
+      h2{
+        font-size: 2rem;
+      }
+      p{
+        font-size: 1.125rem;
+      }
+    }
   }
   
 }

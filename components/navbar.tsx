@@ -19,12 +19,12 @@ function Navbar() {
 
   return (
     <>
-    <div className='flex justify-between xl:pr-5 xl:pl-5 overflow-hidden'>
+    <div className='flex justify-between lg:pr-5 lg:pl-5 overflow-hidden'>
       <Link href="/" className='pointer flex'>
         <img src={'/RH-min.svg'} className={`${styles.Brand} `} alt=''/>
       </Link>
-        <img onClick={showMenu} src={'/navbar.svg'} className={`${styles.Menu} ${menu? '':'bg-color-beige'} xl:hidden`} alt=''/>
-        <nav className={`hidden navigation xl:flex`}>
+        <img onClick={showMenu} src={'/navbar.svg'} className={`${styles.Menu} ${menu? '':'bg-color-beige'} lg:hidden`} alt=''/>
+        <nav className={`hidden navigation lg:flex`}>
           <ul className='flex'>
             <li>
               <Link href={`/`}>About me</Link>
@@ -35,7 +35,7 @@ function Navbar() {
             <li>
               <Link href={`/`}>Contact</Link>
             </li>
-            <span className='line hidden xl:block'/>
+            <span className='line hidden lg:block'/>
             <li className='arrow pointer'>
               {/* <Link href={`/`}>Book a call</Link> */}
               <Link href={`/`} className=''>
@@ -50,7 +50,7 @@ function Navbar() {
 
     <hr className='w-full border-solid border-1 border-black'/>
     <div className='relative lg:hidden'>
-    <nav className={`${menu ? `hidden` : 'navigation-mobile-on '}   xl:flex h-auto px-2 py-8`}>
+    <nav className={`${menu ? `hidden` : 'navigation-mobile-on '}   lg:flex h-auto px-2 py-8`}>
           <ul className='flex flex-col  '>
             <li className='my-2 p-4'>
               <Link href={`/`}>About me</Link>
@@ -61,7 +61,7 @@ function Navbar() {
             <li className='my-2 p-4'>
               <Link href={`/`}>Contact</Link>
             </li>
-            <span className='line hidden xl:block'/>
+            <span className='line hidden lg:block'/>
             <Button text="let's call"/>
           </ul>
         </nav>

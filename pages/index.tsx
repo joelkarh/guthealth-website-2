@@ -4,6 +4,7 @@ import Goals from '../components/goals'
 import Hero from '../components/hero'
 import Truths from '../components/truths'
 import TODO from '../components/toDo'
+import Testimonials from '../components/testimonials'
 
 
 export default function Home() {
@@ -19,7 +20,7 @@ export default function Home() {
         <Goals/>
         <Truths/>
         <TODO/>
-
+        <Testimonials/>
     </Layout>
   )
 }

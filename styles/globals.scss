@@ -179,13 +179,13 @@ h1 {
   }
 
   .__goals-box {
-    max-width: 400px;
+    max-width: 350px;
     height: auto;
 
     h2 {
       font-family: $baskerBold;
       font-size: 1.375rem;
-      Line-height: 23px Line;
+      Line-height: 23px;
       font-weight: 600;
 
     }
@@ -405,13 +405,70 @@ h1 {
     
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-  #__goals {
-    margin-top: 25vw;
+
+#Testimonials{
+  
+  h1{
+    font-family: $baskerBold;
+    font-size: 1.75rem;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 2.25rem;
+    text-align: center;
+    color:$primary-font-color;
   }
+  button{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+  }
+  .__Testimonial_card-box{
+    
+  }
+  .__Testimonial_card{
+    background-color: $bg-color;
+    max-width: 320px;
+    height: auto;
+    margin: 1rem auto;
+    padding: .5rem;
+  }
+  .__Testimonial_card-img{
+    clip-path: circle(50% at 50% 50%);
+    margin-left: 1rem;
+   
+    width: 64px;
+    height: 64px;
+  }
+  address{
+    font-family: $baskerBold;
+    font-weight: 600;
+    font-size:1.25rem ;
+    line-height: 1.3rem;
+    font-style: normal;
+    padding-right: 1rem;
+  }
+  p{
+    font-family: $oxygen;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.625rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  span{
+    display: block;
+    border: 1px solid rgba(51, 51, 51, 0.2);
+    margin: 1rem 0;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
   #truth{
+    h3{
+      margin-top: -1rem;
+    }
     article{
-      
       display: flex;
       width: 100%;
     }
@@ -422,6 +479,8 @@ h1 {
   }
   .truth_article{
     width: 50%;
+    margin-left: auto;
+   
   }
   .truth-qoute{
     z-index: 9;
@@ -467,6 +526,8 @@ h1 {
         height: auto;
         margin-left: auto;
         margin-right: auto;
+        padding: 1rem;
+        min-width: 400px;
         
         
       }
@@ -485,7 +546,8 @@ h1 {
           background-repeat: no-repeat;
           background-size: cover;
         }
-      padding: unset;  
+      margin: 5rem;
+        padding: 1rem;
       max-width: 1352px;
       height: auto;
       h2{
@@ -499,7 +561,7 @@ h1 {
 }
 
 //
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
   .navigation {
     .arrow {
       display: flex;
@@ -564,7 +626,7 @@ h1 {
   }
   #hero {
     article {
-      margin-top: 350px;
+      margin-top: 20rem;
     }
 
     .__name-box {
@@ -663,6 +725,7 @@ h1 {
     .truth_article-img{
       width: auto;
       position: absolute;
+      z-index: -1;
     }
     .truth_article{
       width: 561px;

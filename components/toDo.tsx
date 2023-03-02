@@ -40,13 +40,12 @@ const data = {
 }
 const TODO = () => {
     const [clicked,
-        setClicked] = useState(0)
-    const [show , setShow] = useState()   
+        setClicked] = useState(0)  
 
     const dataList = data.pillers
     return ( 
     <> 
-    <section id="Todo" className="lg:m-24">
+    <section id="Todo" className=" mb-24 lg:m-24">
         <h1>{data.title}</h1>
         <p>
             {data.description}

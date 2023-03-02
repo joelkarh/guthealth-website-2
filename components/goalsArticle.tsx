@@ -22,7 +22,7 @@ function GoalsArticle() {
         },
     ]
   return (
-    <div className='flex justify-center flex-row'>
+    <div className='flex justify-center flex-col lg:flex-row'>
             {data.length > 0 ? data.map(({id,number,title,description})=>(
                 <article key={id} className='text-center __goals-box m-auto my-10 '>
                     <div className='__cirkelBox'> 

@@ -6,7 +6,7 @@ function Goals() {
         
     return (
     <>
-        <section id='__goals' className='my-8  xl:py-16  	'>
+        <section id='__goals' className='my-8 md:mt-72  lg:mt-32  lg:mb-32	'>
             <div className='my-10 max-w-4xl m-auto'>
             <h1 >So... how does it actually work?</h1>
             <p className='py-6'>

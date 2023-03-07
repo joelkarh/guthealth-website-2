@@ -59,9 +59,9 @@ function Testimonials() {
         <Button text={data.buttonText}/>
         <article className=''>
         {reviewList > 0 && reviews.map(({ name, text, img},i)=>(
-            <>
-            <TestimonialCard key={i} name={name} text={text} img={img}/>
-            </>
+            <div key={i}>
+            <TestimonialCard  name={name} text={text} img={img}/>
+            </div>
         ))
         
         }

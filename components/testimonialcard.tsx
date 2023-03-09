@@ -11,8 +11,8 @@ const TestimonialCard = (props : {
 
     return ( 
     <> 
-      <div className='__Testimonial_card '>
-        <div className='__Testimonial_card-box flex items-center justify-between py-4'>
+      <div className='__Testimonial_card  '>
+        <div className=' flex items-center justify-between py-4'>
           <div className='__Testimonial_card-img '>
           <Image className='' src={img} alt='' height={22} width={132}/>
           </div>

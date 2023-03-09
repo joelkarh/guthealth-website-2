@@ -5,9 +5,11 @@ import Hero from '../components/hero'
 import Truths from '../components/truths'
 import TODO from '../components/toDo'
 import Testimonials from '../components/testimonials'
+import WhatTodo from '../components/whattodo'
 
 
-export default function Home() {
+
+export default function Home(): JSX.Element {
   return (
     <Layout>
       <Head>
@@ -21,6 +23,7 @@ export default function Home() {
         <Truths/>
         <TODO/>
         <Testimonials/>
+        <WhatTodo/>
     </Layout>
   )
 }

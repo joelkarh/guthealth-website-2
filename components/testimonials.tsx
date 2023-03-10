@@ -2,39 +2,6 @@ import React from 'react'
 import Button from './button'
 import TestimonialCard from './testimonialcard'
 import Slider from "react-slick";
-function SampleNextArrow(props : {
-    className: any;
-    style: any;
-    onClick: any;
-}) {
-    const {className, style, onClick} = props;
-    return (<div
-        className={className}
-        style={{
-        ...style,
-        display: "block",
-        background: "#e4e2d3",
-        borderRadius: '5px 5px 5px 5px'
-    }}
-        onClick={onClick}/>);
-}
-
-function SamplePrevArrow(props : {
-    className: any;
-    style: any;
-    onClick: any;
-}) {
-    const {className, style, onClick} = props;
-    return (<div
-        className={className}
-        style={{
-        ...style,
-        display: "block",
-        background: "#e4e2d3",
-        borderRadius: '5px 5px 5px 5px'
-    }}
-        onClick={onClick}/>);
-}
 
 const data = {
     id: 0,
@@ -104,8 +71,6 @@ function Testimonials() {
         slidesToShow: 3,
         slidesToScroll: 3,
         initialSlide: 0,
-        nextArrow: <SampleNextArrow className={undefined} style={undefined} onClick={undefined}/>,
-        prevArrow: <SamplePrevArrow className={undefined} style={undefined} onClick={undefined}/>,
         responsive: [
             {
                 breakpoint: 1200,

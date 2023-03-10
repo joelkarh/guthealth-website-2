@@ -21,7 +21,7 @@ function Navbar() {
     <>
     <div className='flex justify-between lg:pr-5 lg:pl-5 overflow-hidden'>
       <Link href="/" className='pointer flex'>
-        <img src={'/RH-min.svg'} className={`${styles.Brand} `} alt=''/>
+        <img src={'/logo_3.svg'} className={`${styles.Brand} `} alt=''/>
       </Link>
         <img onClick={showMenu} src={'/navbar.svg'} className={`${styles.Menu} ${menu? '':'bg-color-beige'} lg:hidden`} alt=''/>
         <nav className={`hidden navigation lg:flex`}>

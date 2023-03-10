@@ -36,7 +36,12 @@ $primary-font-color : #333;
 $baskerville-color : #efeee8;
 $bg-color: #e4e2d3;
 
-
+.primary-bg{
+  background-color: $primary-bg;
+}
+.bg-color-beige{
+  background-color: #e4e2d3;
+}
 * {
   padding: 0;
   margin: 0;
@@ -63,9 +68,7 @@ a {
 h1 {
   font-family: $baskerville;
 }
-.bg-color-beige{
-  background-color: #e4e2d3;
-}
+
 .arrow{
 
   width: 51px;
@@ -304,7 +307,7 @@ h1 {
 
 #Todo{
   h1{
-    font-family: $baskerville;
+    font-family: $baskerBold;
     font-style: normal;
     font-size: 1.75rem;
     font-weight: 400;
@@ -432,7 +435,9 @@ h1 {
     max-width: 429px;
     padding: .5rem;
     // height: 318px;
-
+  }
+  .__Testimonial-qoute{
+    display: none;
   }
   .__Testimonial_card-img{
     clip-path: circle(50% at 50% 50%);
@@ -482,9 +487,69 @@ h1 {
       line-height: 1.625rem;
       color: rgba(51, 51, 51, 0.9);
       text-align: left;
-      
-margin: 2rem auto;
+      margin: 2rem auto;
   }
+
+  thead{
+    th{
+      font-family: $baskerville;
+      font-weight: 600;
+      font-size: 0.875rem;
+      line-height: 0.93rem ;
+      text-align: left;
+      padding-left: .5rem;
+      padding-right: .5rem;
+    }
+    
+  }
+  tr{
+    max-width: 343px;
+    height: 72px;
+  }
+  td{
+    font-family: 'Baskerville';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 105%;
+    text-align: left;
+    padding-left: 1rem;
+    img{
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+}
+#qa{
+  background-color: $bg-color;
+  #qaBtn{
+  border: 1px solid #333333;
+  margin: 0 1rem;
+  max-width: 425px;
+  height: 67px;
+.__qaBtn_question-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  padding: 24px;
+  h2{
+    font-family: $baskerBold;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.19rem;
+  }
+  img{
+    
+  }
+}
+.__qaBtn_answer-box{
+  display: none;
+}
+.__qaBtn_answer-box-show{
+  display: block;
+}
+}
+
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -828,7 +893,55 @@ margin: 2rem auto;
       }
     }
   }
-  
+  #Testimonials{
+    .__Testimonial-qoute{
+      display: block;
+     
+      p{
+        text-align:  right;
+        padding-right: 1rem;
+      font-size: 5rem;
+      font-family: "Baskerville", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      line-height: 4.875rem;
+      }
+      .__Testimonial-qoute-author{
+        padding: 2rem 1rem;
+        float: right;
+        font-size: 1.375rem;
+        line-height: 2.25rem;
+        font-weight: 400;
+        font-style: normal;
+      }
+    }
+  }
+  #Whattodo{
+    display: flex;
+    justify-content: space-between;
+    article{
+      max-width: 543px;
+      padding: 0 3rem;
+    }
+    margin-top: 10rem;
+    table{
+      thead{
+        th{
+          font-size: 1.125rem
+        }
+      }
+      tbody{
+        td{
+          font-size: 1.125rem 
+        }
+      }
+     width: 48.4rem;
+      margin: 0;
+      tr{
+        width: auto;
+      }
+    }
+  }
 }
 //
 @media (min-width: 1440px) {}

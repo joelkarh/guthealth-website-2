@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import Button from './button'
 import TestimonialCard from './testimonialcard'
@@ -57,8 +58,12 @@ const data = {
                     'ork balance, took my business of the ground while keeping healthy relationship w' +
                     'ith my friends and family.'
         }
-
-    ]
+    ],
+    quote:
+        {
+            title:'Life shoulld not only be lived ' + 'it should be celebrated',
+        author:'Mark Twain : The Story of the Fox',
+    }
 }
 function Testimonials() {
     const reviews = data.people
@@ -95,10 +100,10 @@ function Testimonials() {
             }
         ]
     };
-    return ( <> <section id='Testimonials' className=''>
+    return ( <> <section id='Testimonials' className='container mx-auto'>
         <h1 className='my-20'>{data.title}</h1>
         <Button text={data.buttonText}/>
-        <div className='lg:m-16 my-12'>
+        <div className='my-32'>
             <Slider {...settings}>
                 {reviewList > 0 && reviews.map(({
                     name,
@@ -108,12 +113,18 @@ function Testimonials() {
                     <article key={i} className='__Testimonial_card-box'>
                         <TestimonialCard name={name} text={text} img={img}/>
                     </article>
-
                 ))
 }
             </Slider>
+            
         </div>
-    </section> </>
+        <article className='__Testimonial-qoute pr-6 pl-6 my-32'>
+            <img src="/qoutes.svg" alt="" />
+            <p>{data.quote.title}</p>
+            <div className='__Testimonial-qoute-author'>{data.quote.author}</div>
+        </article>
+    </section> 
+    </>
   )
 }
 

@@ -6,6 +6,7 @@ import Truths from '../components/truths'
 import TODO from '../components/toDo'
 import Testimonials from '../components/testimonials'
 import WhatTodo from '../components/whattodo'
+import Qa from '../components/qa'
 
 
 
@@ -24,6 +25,7 @@ export default function Home(): JSX.Element {
         <TODO/>
         <Testimonials/>
         <WhatTodo/>
+        <Qa/>
     </Layout>
   )
 }

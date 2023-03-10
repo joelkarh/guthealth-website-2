@@ -1,18 +1,18 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react'
 
-function WhatTodoBox(props:{title:string, secondTitle:string, thirdTitle:string, backgroundColor:string, font:string}) {
-     const {title, secondTitle,thirdTitle,backgroundColor, font}= props
+function WhatTodoBox(props:{ title:string, checkmark:string, exit:string, backgroundColor:string}) {
+     const { title, checkmark, exit, backgroundColor}= props
   return (
-    <table className='whattodo-box'>
-     <thead >
-          <tr className={`${backgroundColor} ${font} `}>
-          <th>{title}</th>
-          <th>{secondTitle}</th>
-          <th>{thirdTitle}</th>
-          </tr>
-     </thead>
-
-    </table>
+    
+     <tbody>
+      <tr className={`${backgroundColor}`}>
+        <td>{title}</td>
+        <td><img src={`${checkmark}`} alt=""/></td>
+        <td><img src={`${exit}`} alt="" /></td>
+      </tr>
+     </tbody>
+ 
   )
 }
 

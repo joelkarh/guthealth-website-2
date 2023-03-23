@@ -5,7 +5,7 @@ const Pillers = (props: { title: string; text: string; qoute: string; author: st
     const {title,text, qoute, author, src} = props
   return (
     <>
-        <div className="hidden lg:block __Todo-border">
+        <div className="hidden lg:block __Todo-border-animation __Todo-border">
                 <Image src={src} alt='' width={516} height={516}/>
         </div>
         <div className='__Todo_box'>

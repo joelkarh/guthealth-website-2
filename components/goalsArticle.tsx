@@ -25,12 +25,15 @@ function GoalsArticle() {
     <div className='flex justify-center flex-col lg:flex-row'>
             {data.length > 0 ? data.map(({id,number,title,description})=>(
                 <article key={id} className='text-center __goals-box m-auto my-10 '>
-                    <div className='__cirkelBox'> 
+                    <div className='__cirkelBox '> 
                         <span className='__cirkelBox-cirkel'>{number}
                         </span>
                     </div>
-                <h2 className='my-4 py-2 xl:my-8 xl:pt-4'>{title}</h2>
+                    <div data-aos="fade-up">
+                    <h2 className='my-4 py-2 xl:my-8 xl:pt-4'>{title}</h2>
                 <p>{description}</p>
+                    </div>   
+                
                 </article>
             )):'nothing'}
             </div>

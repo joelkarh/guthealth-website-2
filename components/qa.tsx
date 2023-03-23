@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Button from './button'
 import QaButton from './qaButton'
 const data ={
                title:'I get asked this a lot',
@@ -37,17 +38,23 @@ const data ={
 export default function Qa() {
      
      return (
-     <section id='qa'>
+     <section id='qa' className='mx-auto' data-aos="fade-in">
      <article className='text-center'>
-     <h1>{data.title}</h1>
+     <h1 className='text-2xl'>{data.title}</h1>
      <p>{data.subtitle}</p>
-     </article>
+             </article>
+    <section className='qa__section px-4' data-aos="fade-up">
+                 
+             
      {
           data.questions.map(({question, answer},i)=>(
-               <QaButton key={i} question={question} answer={answer}/>
+            <QaButton key={i} question={question} answer={answer}/>
           ))
      }
-     
+             </section>
+             <div className='qa__button ' data-aos="fade-up">
+             <Button text='Get in touch'/>
+             </div>
      </section>
      )
 }

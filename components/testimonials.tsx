@@ -1,8 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
-import React from 'react'
+import {useEffect} from 'react'
 import Button from './button'
 import TestimonialCard from './testimonialcard'
 import Slider from "react-slick";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const data = {
     id: 0,
@@ -66,6 +68,12 @@ const data = {
     }
 }
 function Testimonials() {
+    useEffect(() => {
+        AOS.init({
+            delay: 200, // values from 0 to 3000, with step 50ms
+            duration: 3000, // values from 0 to 3000, with step 50ms
+        });
+      }, []);
     const reviews = data.people
     const reviewList = data.people.length
     const settings = {
@@ -100,7 +108,7 @@ function Testimonials() {
             }
         ]
     };
-    return ( <> <section id='Testimonials' className='container mx-auto'>
+    return ( <> <section id='Testimonials' className='container mx-auto' data-aos="fade-in">
         <h1 className='my-20'>{data.title}</h1>
         <Button text={data.buttonText}/>
         <div className='my-32'>
@@ -118,7 +126,7 @@ function Testimonials() {
             </Slider>
             
         </div>
-        <article className='__Testimonial-qoute pr-6 pl-6 my-32'>
+        <article className='__Testimonial-qoute pr-6 pl-6 my-32' data-aos="fade-up">
             <img src="/qoutes.svg" alt="" />
             <p>{data.quote.title}</p>
             <div className='__Testimonial-qoute-author'>{data.quote.author}</div>

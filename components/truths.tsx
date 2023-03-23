@@ -1,9 +1,12 @@
 import Image from 'next/image'
-import React from 'react'
+import {useEffect} from 'react'
 import qoute from "./../public/qoutes.svg"
 import sun from "./../public/sun.svg"
 import Button from './button'
 import style from './../styles/Home.module.scss'
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 function Truths() {
     const data = {
@@ -30,14 +33,20 @@ function Truths() {
             }
         ]
     }
+    useEffect(() => {
+        AOS.init({
+            delay: 200, // values from 0 to 3000, with step 50ms
+            duration: 2000, // values from 0 to 3000, with step 50ms
+        });
+      }, []);
     return ( 
     <div className='relative '> 
     <section id='truth' className='mx-auto xl: z-10 relative'>
         <article className='lg:container'>
-            <div className='truth_article-img'>
+            <div className='truth_article-img' data-aos="fade-in">
                 <Image alt='' width={692} height={919} src='/imagewithfilter.png' /> 
             </div>
-        <div className='truth_article'>
+        <div className='truth_article' data-aos="fade-up">
         <h3 className=''>{data.title}</h3>
             <p className='truth_article_2'>{data.titleDescription}</p>
             <h4 className=''>{data.subtitle}</h4>
@@ -59,7 +68,7 @@ function Truths() {
     </section> 
     {/* abolute is gone */}
     <section  className=' truth-qoute mt-8 lg:mt-0 p-4 '>
-            <article className='relative'>
+            <article className='relative'  data-aos="fade-in">
                 <Image src={sun} alt="" width={275.5} height={162.5} className='sun hidden lg:block mr-4'/>
                 <Image src={qoute} alt='' width={51} height={36} className='my-8 '/>
                 <div className='qoute'>

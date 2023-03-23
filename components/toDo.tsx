@@ -1,5 +1,7 @@
-import {useState} from "react"
+import {useState, useEffect} from "react"
 import Pillers from "./pillers"
+import AOS from "aos";
+import "aos/dist/aos.css";
 const data = {
     title: 'Things we will do together',
     description: 'On our journey I will teach you different excercises and techniques so you can c' +
@@ -41,11 +43,16 @@ const data = {
 const TODO = () => {
     const [clicked,
         setClicked] = useState(0)  
-
+        useEffect(() => {
+            AOS.init({
+                delay: 200, // values from 0 to 3000, with step 50ms
+                duration: 3000, // values from 0 to 3000, with step 50ms
+            });
+          }, []);
     const dataList = data.pillers
     return ( 
     <> 
-    <section id="Todo" className=" mb-24 lg:m-24">
+    <section id="Todo" className=" mb-24 lg:m-24" data-aos="fade-up">
         <h1>{data.title}</h1>
         <p>
             {data.description}
@@ -74,7 +81,8 @@ const TODO = () => {
                 text={description}
                 qoute={qoute}
                 author={author}
-                src={src}
+                        src={src}
+                        
                 />
             </article>
         )}

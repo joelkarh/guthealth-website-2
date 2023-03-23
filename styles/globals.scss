@@ -2,44 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @font-face {
-  font-family: 'oxygen';
-  src: url('./mainFont/Oxygen/Oxygen-Regular.ttf');
+  font-family: "oxygen";
+  src: url("./mainFont/Oxygen/Oxygen-Regular.ttf");
 }
 
 @font-face {
-  font-family: 'Baskerville';
-  src: url('./mainFont/Libre_Baskerville/LibreBaskerville-Regular.ttf');
+  font-family: "Baskerville";
+  src: url("./mainFont/Libre_Baskerville/LibreBaskerville-Regular.ttf");
 }
 
 @font-face {
-  font-family: 'BaskervilleI';
-  src: url('./mainFont/Libre_Baskerville/LibreBaskerville-Italic.ttf');
+  font-family: "BaskervilleI";
+  src: url("./mainFont/Libre_Baskerville/LibreBaskerville-Italic.ttf");
 }
 
 @font-face {
-  font-family: 'BaskervilleB';
-  src: url('./mainFont/Libre_Baskerville/LibreBaskerville-Bold.ttf');
+  font-family: "BaskervilleB";
+  src: url("./mainFont/Libre_Baskerville/LibreBaskerville-Bold.ttf");
 }
 
-$baskerville: 'Baskerville',
-sans-serif;
-$baskerItalic: 'BaskervilleI',
-sans-serif;
-$baskerBold:'BaskervilleB',
-sans-serif;
-$oxygen: 'oxygen',
-sans-serif;
-$primary-bg : #EFEEE8;
-$primary-font-color : #333;
-$baskerville-color : #efeee8;
+$baskerville: "Baskerville", sans-serif;
+$baskerItalic: "BaskervilleI", sans-serif;
+$baskerBold: "BaskervilleB", sans-serif;
+$oxygen: "oxygen", sans-serif;
+$primary-bg: #efeee8;
+$primary-font-color: #333;
+$baskerville-color: #efeee8;
 $bg-color: #e4e2d3;
-
-.primary-bg{
+html{
+  scroll-behavior: smooth;
+}
+.primary-bg {
   background-color: $primary-bg;
 }
-.bg-color-beige{
+.bg-color-beige {
   background-color: #e4e2d3;
 }
 * {
@@ -52,7 +49,8 @@ html,
 body {
   background-color: $primary-bg;
   box-sizing: border-box;
-  font-family: $oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: $oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
   line-height: 20px;
 }
 
@@ -69,11 +67,9 @@ h1 {
   font-family: $baskerville;
 }
 
-.arrow{
-
+.arrow {
   width: 51px;
   margin-right: 1.2rem;
-
 }
 .navigation {
   a {
@@ -81,24 +77,24 @@ h1 {
     font-weight: 400;
   }
 }
-.navigation-mobile-on{
+.navigation-mobile-on {
   background-color: #e4e2d3;
   position: absolute;
   display: block;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   right: 0;
   width: 100%;
   transform: translateY(0px) translateX(0px);
   transition: transform 400ms ease 0s;
-  li{
-    a{
+  li {
+    a {
       font-size: 1rem;
       color: #222222;
       line-height: 1.25rem;
-        color: #222222;
-        text-align: left;
-        white-space: nowrap;
+      color: #222222;
+      text-align: left;
+      white-space: nowrap;
     }
   }
 }
@@ -117,7 +113,6 @@ h1 {
   height: 4rem;
   background-color: $primary-font-color;
 
-
   .__btn-text-1 {
     color: $baskerville-color;
     font-size: 1.125rem;
@@ -130,11 +125,10 @@ h1 {
   .--arrow-up {
     margin-left: auto;
   }
-
 }
 
 #hero {
-  h1+p {
+  h1 + p {
     color: $primary-font-color;
   }
 
@@ -142,13 +136,12 @@ h1 {
     max-width: 595px;
   }
 
-
   .__image {
     display: block;
     max-width: 644px;
     max-height: 773px;
 
-    &>.__image-img {
+    & > .__image-img {
       width: 100% !important;
       height: 100% !important;
     }
@@ -189,15 +182,14 @@ h1 {
     h2 {
       font-family: $baskerBold;
       font-size: 1.375rem;
-      Line-height: 23px;
+      line-height: 23px;
       font-weight: 600;
-
     }
 
     p {
       font-size: 1rem;
-      Line-height: 26px;
-      Line-height: 165%;
+      line-height: 26px;
+      line-height: 165%;
     }
   }
 
@@ -208,7 +200,7 @@ h1 {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    border: 1px solid #A2A1A0;
+    border: 1px solid #a2a1a0;
     background-color: #efeee8;
     z-index: 1;
   }
@@ -224,11 +216,11 @@ h1 {
     transform: translate(-50%, -50%);
   }
 }
-#truth{
-  .truth_article{
+#truth {
+  .truth_article {
     padding: 1rem;
   }
-  h3{
+  h3 {
     font-family: $baskerville;
     font-style: normal;
     font-size: 1.75rem;
@@ -236,9 +228,9 @@ h1 {
     line-height: 2.25rem;
     color: $primary-font-color;
     padding: 1rem 0;
-    margin-top: 3rem
+    margin-top: 3rem;
   }
-  .truth_article_2{
+  .truth_article_2 {
     font-family: $oxygen;
     font-style: normal;
     font-size: 1rem;
@@ -246,20 +238,19 @@ h1 {
     line-height: 1.625rem;
     color: rgba(51, 51, 51, 0.9);
     padding: 1.5rem 0;
-    
   }
-  h4{
+  h4 {
     font-family: $oxygen;
     font-style: normal;
     font-weight: 700;
-    font-size: .875rem;
+    font-size: 0.875rem;
     line-height: 1.437rem;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: $primary-font-color;
     padding: 1rem 0;
   }
-  .truth_p{
+  .truth_p {
     font-family: $oxygen;
     font-size: 1rem;
     line-height: 1.65rem;
@@ -268,21 +259,21 @@ h1 {
     position: relative;
     padding: 1rem 0;
   }
-  p.truth_p::after{
-    content: '';
+  p.truth_p::after {
+    content: "";
     position: absolute;
     height: 1.5px;
-    bottom: -4px; 
-    margin:  auto 0;
-		left: 0;
+    bottom: -4px;
+    margin: auto 0;
+    left: 0;
     right: 0;
     background-color: $primary-font-color;
   }
 }
-.truth-qoute{
+.truth-qoute {
   background-color: $bg-color;
   width: 100%;
-  p{
+  p {
     font-family: $baskerville;
     font-size: 1.75rem;
     font-weight: 400;
@@ -291,22 +282,40 @@ h1 {
     line-height: 1.68rem;
     color: #333;
   }
-  span{
+
+  span {
     line-height: 1.625rem;
     font-size: 1rem;
     color: rgba(51, 51, 51, 0.8);
-    
   }
-  .sun{
-    margin-left: auto;
+  .sun {
+    padding: 2rem 0;
+    margin-left: 70%;
+    animation-name: sunTurning;
+    animation-duration: 3000ms; 
+    animation-timing-function: ease-in-out; 
+    animation-delay: 1000ms;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+
+    // animation-play-state: running;
   }
-  .qoute{
+  @keyframes sunTurning {
+    0%{
+      transform: rotate(0deg);
+
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+  }
+  .qoute {
     max-width: 84.5rem;
   }
 }
 
-#Todo{
-  h1{
+#Todo {
+  h1 {
     font-family: $baskerBold;
     font-style: normal;
     font-size: 1.75rem;
@@ -320,7 +329,7 @@ h1 {
     text-align: center;
   }
 
-  p{
+  p {
     font-family: $oxygen;
     font-style: normal;
     font-size: 1rem;
@@ -332,44 +341,44 @@ h1 {
     margin-left: auto;
     margin-right: auto;
   }
-  .__Todo_btn-box{
+  .__Todo_btn-box {
     background-color: $bg-color;
     max-width: 343px;
     height: 56px;
     border-radius: 50px;
-    margin: 1.5rem auto; 
+    margin: 1.5rem auto;
   }
-  .__Todo-btn{
+  .__Todo-btn {
     width: 110px;
     height: 44px;
-    font-family: 'Baskerville';
+    font-family: "Baskerville";
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 165%;
   }
-  .__Todo-btn-clicked{
+  .__Todo-btn-clicked {
     background-color: #222222;
     border-radius: 70px;
     color: $baskerville-color;
   }
-  .__Todo_article{
+  .__Todo_article {
     text-align: center;
-    h2{
+    h2 {
       font-family: $baskerville;
       font-size: 1.375rem;
       color: #333;
       font-weight: 600;
       line-height: 23px;
     }
-    p{
+    p {
       font-family: $oxygen;
       font-style: normal;
       font-weight: 400;
       font-size: 1rem;
       line-height: 26px;
     }
-    blockquote{
+    blockquote {
       font-family: $baskerville;
       font-style: normal;
       font-weight: 400;
@@ -377,7 +386,7 @@ h1 {
       max-width: 331px;
       margin: 1rem auto;
     }
-    address{
+    address {
       font-family: $baskerville;
       font-style: normal;
       font-weight: 600;
@@ -391,70 +400,68 @@ h1 {
     margin-right: auto;
     padding: 2rem 0;
   }
-  .__Todo_article-hide{
+  .__Todo_article-hide {
     display: none;
   }
-  .__Todo_article-qoute{
-    
-    .__Todo_article-qoute-qoute{
+  .__Todo_article-qoute {
+    .__Todo_article-qoute-qoute {
       position: relative;
       z-index: 9;
       background-color: #e4e2d3;
     }
-    .__Todo_article-qoute-line{
+    .__Todo_article-qoute-line {
       position: absolute;
       bottom: 50%;
       top: 50%;
     }
-    
   }
 }
 
-#Testimonials{
+#Testimonials {
   overflow: hidden;
-  
-  h1{
+
+  h1 {
     font-family: $baskerBold;
     font-size: 1.75rem;
     font-weight: 700;
     font-style: normal;
     line-height: 2.25rem;
     text-align: center;
-    color:$primary-font-color;
+    color: $primary-font-color;
   }
-  button{
+  button {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2rem;
   }
-  .__Testimonial_card-box{
-   padding: .5rem;
+  .__Testimonial_card-box {
+    padding: 0.5rem;
   }
-  .__Testimonial_card{
+  .__Testimonial_card {
     background-color: $bg-color;
     max-width: 429px;
-    padding: .5rem;
+    padding: 0.5rem;
     // height: 318px;
   }
-  .__Testimonial-qoute{
+  .__Testimonial-qoute {
     display: none;
   }
-  .__Testimonial_card-img{
+  .__Testimonial_card-img {
     clip-path: circle(50% at 50% 50%);
     margin-left: 1rem;
-   
+
     width: 64px;
     height: 64px;
   }
-  address{
+  address {
     font-family: $baskerBold;
     font-weight: 600;
-    font-size:1.25rem ;
+    font-size: 1.25rem;
     line-height: 1.3rem;
     font-style: normal;
     padding-right: 1rem;
   }
-  p{
+  p {
     font-family: $oxygen;
     font-style: normal;
     font-weight: 400;
@@ -463,125 +470,163 @@ h1 {
     margin-left: auto;
     margin-right: auto;
   }
-  span{
+  span {
     display: block;
     border: 1px solid rgba(51, 51, 51, 0.2);
     margin: 1rem 0;
   }
 }
-#Whattodo{
-  h1{
+#Whattodo {
+  h1 {
     font-family: $baskerBold;
     font-size: 1.75rem;
     font-weight: 700;
     font-style: normal;
     line-height: 2.25rem;
     text-align: left;
-    color:$primary-font-color;
+    color: $primary-font-color;
   }
-  p{
-      font-family: $oxygen;
-      font-style: normal;
-      font-size: 1rem;
-      font-weight: 400;
-      line-height: 1.625rem;
-      color: rgba(51, 51, 51, 0.9);
-      text-align: left;
-      margin: 2rem auto;
+  p {
+    font-family: $oxygen;
+    font-style: normal;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.625rem;
+    color: rgba(51, 51, 51, 0.9);
+    
+    margin: 2rem auto;
   }
 
-  thead{
-    th{
+  thead {
+    th {
       font-family: $baskerville;
       font-weight: 600;
       font-size: 0.875rem;
-      line-height: 0.93rem ;
+      line-height: 0.93rem;
       text-align: left;
-      padding-left: .5rem;
-      padding-right: .5rem;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
     }
-    
   }
-  tr{
+  tr {
     max-width: 343px;
     height: 72px;
   }
-  td{
-    font-family: 'Baskerville';
+  td {
+    font-family: "Baskerville";
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 105%;
     text-align: left;
     padding-left: 1rem;
-    img{
+    img {
       margin-right: auto;
       margin-left: auto;
     }
   }
 }
-#qa{
+#qa {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
   background-color: $bg-color;
-  #qaBtn{
+  cursor: pointer;
+  .qa__button {
+    button {
+      margin: 1rem auto;
+    }
+  }
+  h1 {
+    margin-bottom: 1rem;
+  }
+  #qaBtn {
+    border: 1px solid #333333;
+    margin: auto;
+    max-width: 425px;
+    height: 67px;
+
+    .__qaBtn_question-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px;
+      h2 {
+        font-family: $baskerville;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.19rem;
+      }
+    }
+  }
+  .__qaBtn_answer-box-none {
+    display: none;
+  }
+}
+.__qaBtn_answer-box-checked {
+  display: block;
   border: 1px solid #333333;
-  margin: 0 1rem;
+  margin: auto;
   max-width: 425px;
   height: 67px;
-.__qaBtn_question-box{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  padding: 24px;
-  h2{
-    font-family: $baskerBold;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 1.19rem;
-  }
-  img{
-    
+  p {
+    padding: 24px;
   }
 }
-.__qaBtn_answer-box{
-  display: none;
+.qa__section {
+  margin-top: 1.5rem;
 }
-.__qaBtn_answer-box-show{
-  display: block;
+//footer
+.footer__socials > img {
+  max-width: 185px;
 }
-}
+.footer{
+  font-family: $baskerville;
 
+  h1{
+    font-family: $baskerville;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 2rem;
+    letter-spacing: 0em;
+  }
+  li a{
+    font-family: $baskerBold;
+  }
+ 
+}
+.footer__banner{
+  background-color: #E8E6E0;
+  padding: 1.5rem;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-
-  #truth{
-    h3{
+  #truth {
+    h3 {
       margin-top: -1rem;
     }
-    article{
+    article {
       display: flex;
       width: 100%;
     }
   }
-  .truth_article-img{
+  .truth_article-img {
     width: 50%;
     position: absolute;
   }
-  .truth_article{
+  .truth_article {
     width: 50%;
     margin-left: auto;
-   
   }
-  .truth-qoute{
+  .truth-qoute {
     z-index: 9;
-    p{
+    p {
       font-size: 5rem;
       font-family: $baskerville;
       font-weight: 400;
       font-style: normal;
       line-height: 4.875rem;
     }
-    span{
+    span {
       font-size: 1.375rem;
       line-height: 2.25rem;
       font-weight: 400;
@@ -589,61 +634,62 @@ h1 {
     }
     bottom: -54rem;
   }
-  #Todo{
-    h1{
+  #Todo {
+    h1 {
       max-width: unset;
       font-size: 2.75rem;
       line-height: 2.875rem;
       font-weight: 400;
     }
 
-    p{
+    p {
       font-size: 1.375rem;
       max-width: 44.8125rem;
     }
-    .__Todo_btn-box{
+    .__Todo_btn-box {
       max-width: 37.25rem;
       margin-bottom: 3rem;
       margin-top: 3rem;
     }
-    .__Todo-btn{
-      width: 184px ;
+    .__Todo-btn {
+      width: 184px;
       font-size: 1.125rem;
     }
-    .__Todo_article{
-      .__Todo_box{
+    .__Todo_article {
+      .__Todo_box {
         max-width: 556px;
         height: auto;
         margin-left: auto;
         margin-right: auto;
         padding: 1rem;
         min-width: 400px;
-        
-        
       }
-      blockquote{
+      blockquote {
         font-family: $baskerville;
         font-size: 1.75rem;
         max-width: 556px;
         line-height: 29.4px;
         font-weight: 200;
-        font-style:'';
-        }
-        .__Todo-border{
-          border: 4rem solid $primary-font-color;
-          background-image: url('/public/filter.png') ;
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: cover;
-        }
+        font-style: "";
+      }
+      .__Todo-border {
+        border: 4rem solid $primary-font-color;
+        background-image: url("/public/filter.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+      }
+      
+
       margin: 5rem;
-        padding: 1rem;
+      padding: 1rem;
       max-width: 1352px;
       height: auto;
-      h2{
+      h2 {
         font-size: 2rem;
       }
-      p{
+      p {
         font-size: 1.125rem;
       }
     }
@@ -668,27 +714,29 @@ h1 {
       .__arrowUp {
         // transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
         width: 1rem;
-        border: .5px solid #333;
+        border: 0.5px solid #333;
         position: absolute;
         right: 22px;
         top: 40px;
-        transform: translate3d(3px, -6px, 0px) rotateX(45deg) rotateY(45deg)rotateZ(35deg);
+        transform: translate3d(3px, -6px, 0px) rotateX(45deg) rotateY(45deg)
+          rotateZ(35deg);
       }
 
       .__arrowMiddle {
         position: absolute;
         width: 2.375rem;
-        border: .5px solid $primary-font-color;
+        border: 0.5px solid $primary-font-color;
       }
 
       .__arrowDown {
         // display: hidden;
         position: absolute;
         width: 1rem;
-        border: .5px solid #333;
+        border: 0.5px solid #333;
         right: 22px;
         top: 40px;
-        transform: translate3d(2px, 6px, 0px) rotateX(45deg) rotateY(145deg) rotateZ(30deg);
+        transform: translate3d(2px, 6px, 0px) rotateX(45deg) rotateY(145deg)
+          rotateZ(30deg);
       }
     }
     width: 604px;
@@ -757,8 +805,6 @@ h1 {
       letter-spacing: 0em;
       text-align: left;
     }
-
-
   }
   #CTA {
     .__btn-text-1 {
@@ -806,34 +852,33 @@ h1 {
     }
   }
 
-  #truth{
-    article{
+  #truth {
+    article {
       display: flex;
       width: 100%;
     }
-    h3{
+    h3 {
       margin-top: unset;
     }
-    .truth_article-img{
+    .truth_article-img {
       width: auto;
       position: absolute;
       z-index: -1;
     }
-    .truth_article{
+    .truth_article {
       width: 561px;
       margin-left: auto;
     }
-    
   }
-  .truth-qoute{
-    p{
+  .truth-qoute {
+    p {
       font-size: 5rem;
       font-family: $baskerville;
       font-weight: 400;
       font-style: normal;
       line-height: 4.875rem;
     }
-    span{
+    span {
       font-size: 1.375rem;
       line-height: 2.25rem;
       font-weight: 400;
@@ -842,71 +887,84 @@ h1 {
     bottom: -40rem;
     z-index: 9;
   }
-  #Todo{
-    h1{
+  #Todo {
+    h1 {
       max-width: unset;
       font-size: 2.75rem;
       line-height: 2.875rem;
       font-weight: 400;
     }
 
-    p{
+    p {
       font-size: 1.375rem;
       max-width: 44.8125rem;
     }
-    .__Todo_btn-box{
+    .__Todo_btn-box {
       max-width: 37.25rem;
       margin-bottom: 3rem;
       margin-top: 3rem;
     }
-    .__Todo-btn{
-      width: 184px ;
+    .__Todo-btn {
+      width: 184px;
       font-size: 1.125rem;
     }
-    .__Todo_article{
-      .__Todo_box{
+    .__Todo_article {
+      .__Todo_box {
         max-width: 556px;
         height: auto;
         margin-left: auto;
         margin-right: auto;
-        
       }
-      blockquote{
+      blockquote {
         font-family: $baskerville;
         font-size: 1.75rem;
         max-width: 556px;
         line-height: 29.4px;
         font-weight: 200;
-        font-style:'';
-        }
-        .__Todo-border{
-          border: 4rem solid $primary-font-color;
-        }
-      padding: unset;  
+        font-style: "";
+      }
+      .__Todo-border {
+        border: 4rem solid $primary-font-color;
+      }
+      padding: unset;
       max-width: 1352px;
       height: auto;
-      h2{
+      h2 {
         font-size: 2rem;
       }
-      p{
+      p {
         font-size: 1.125rem;
+      }
+      .__Todo-border-animation{
+        animation-name: fadeIn;
+        animation-duration: 2000ms;
+        
+      }
+      //
+      @keyframes fadeIn {
+        0%{
+          opacity:.1;
+        }
+        100%{
+          opacity: 1;
+        }
       }
     }
   }
-  #Testimonials{
-    .__Testimonial-qoute{
+  #Testimonials {
+    .__Testimonial-qoute {
       display: block;
-     
-      p{
-        text-align:  right;
+
+      p {
+        text-align: right;
         padding-right: 1rem;
-      font-size: 5rem;
-      font-family: "Baskerville", sans-serif;
-      font-weight: 400;
-      font-style: normal;
-      line-height: 4.875rem;
+        font-size: 5rem;
+        font-family: "Baskerville", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 4.875rem;
       }
-      .__Testimonial-qoute-author{
+      .__Testimonial-qoute-author {
         padding: 2rem 1rem;
         float: right;
         font-size: 1.375rem;
@@ -916,35 +974,50 @@ h1 {
       }
     }
   }
-  #Whattodo{
+  #Whattodo {
     display: flex;
     justify-content: space-between;
-    article{
+    article {
       max-width: 543px;
       padding: 0 3rem;
     }
     margin-top: 10rem;
-    table{
-      thead{
-        th{
-          font-size: 1.125rem
+    table {
+      thead {
+        th {
+          font-size: 1.125rem;
         }
       }
-      tbody{
-        td{
-          font-size: 1.125rem 
+      tbody {
+        td {
+          font-size: 1.125rem;
         }
       }
-     width: 48.4rem;
+      width: 48.4rem;
       margin: 0;
-      tr{
+      tr {
         width: auto;
       }
     }
   }
+  #qa {
+    #qaBtn {
+      max-width: 890px;
+    }
+    .__qaBtn_answer-box-checked {
+      max-width: 890px;
+    }
+  }
+  .footer{
+    h1{
+      max-width: 545px;
+
+    }
+  }
 }
 //
-@media (min-width: 1440px) {}
+@media (min-width: 1440px) {
+}
 //
 @media (min-width: 2560px) {
   #hero {
@@ -952,15 +1025,13 @@ h1 {
       left: 30%;
     }
   }
-  .truth_article{
+  .truth_article {
     width: 561px;
     margin-left: 2rem;
   }
-  .truth-qoute{
-    .qoute{
+  .truth-qoute {
+    .qoute {
       max-width: unset;
     }
   }
-  
-
 }

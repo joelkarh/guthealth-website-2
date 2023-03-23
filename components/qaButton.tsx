@@ -1,24 +1,22 @@
 import Image from "next/image";
 import React, { useState } from 'react'
 
-export default function QaButton(props:{question:string, answer:string, open?:boolean}) {
+
+export default function QaButton(props: { question: string, answer: string, open?: boolean }) {
+  const [open, setOpen] = useState(false)
      const {question, answer} = props;
-     const [open, setOpen] = useState(false)
-     const handleClickOpen = () => {
-         setOpen(true)
-         console.log(open)
-     }
+
   return (
     <>
-    <div id='qaBtn'>
-     <div className="flex justify-between __qaBtn_question-box" onClick={handleClickOpen}>
+    <div id='qaBtn' onClick={()=> setOpen(!open)}>
+     <div className={`flex justify-between __qaBtn_question-box`} >
      <h2>{question}</h2>
-     <Image src="/downBtn.svg" alt="" width={12} height={6} />
+      <Image src="/downBtn.svg" alt="" priority={true} width={15} height={15} /> 
      </div>
-     <div className="__qaBtn_answer-box">
-          {answer}
-     </div>
-    </div>
+      </div>
+      <div className={`${open ? '__qaBtn_answer-box-checked': '__qaBtn_answer-box-none'} `}>
+         <p>{answer}</p> 
+      </div>
     </>
   )
 }

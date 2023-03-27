@@ -27,7 +27,6 @@ export default function Home(): JSX.Element {
         <Testimonials/>
         <WhatTodo/>
       <Qa />
-      <Footer/>
     </Layout>
   )
 }

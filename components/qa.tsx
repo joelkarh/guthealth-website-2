@@ -43,7 +43,7 @@ export default function Qa() {
      <h1 className='text-2xl'>{data.title}</h1>
      <p>{data.subtitle}</p>
              </article>
-    <section className='qa__section px-4' data-aos="fade-up">
+    <section className='px-4 qa__section' data-aos="fade-up">
                  
              
      {
@@ -53,7 +53,7 @@ export default function Qa() {
      }
              </section>
              <div className='qa__button ' data-aos="fade-up">
-             <Button text='Get in touch'/>
+             <Button bg__color_arrow='cta__bg-light' btnColor='btn__color-black' text='Get in touch'/>
              </div>
      </section>
      )

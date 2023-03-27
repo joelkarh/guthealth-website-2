@@ -5,18 +5,21 @@ import {CgArrowLongRight} from "react-icons/cg";
 //props 
 type Props = {
   text: string;
+  btnColor: string;
+  bg__color_arrow: string;
 };
-function Button({text}:Props) {
+function Button({text,btnColor, bg__color_arrow}:Props) {
   
   return (
-    <button id='CTA' className='flex items-center justify-between px-4 mt-8'>
-                <span className='__btn-text-1'>{text}</span>
-                {/*  eslint-disable-next-line @next/next/no-img-element */}
-          <IconContext.Provider value={{ color: "white", className: "arrow", size:"2.5rem" }}> 
-                          <div className=''>
-                          <CgArrowLongRight />
-                          </div>
-          </IconContext.Provider>          
+    <button id='CTA' className={`${btnColor}  `}>
+                <span className={`__btn-text-1`}>{text}</span>
+      {/*  eslint-disable-next-line @next/next/no-img-element */}
+      
+      <div className={`cta__wrap ${bg__color_arrow}`}>
+        <div className={`cta__arrow cta__arrow-up ${bg__color_arrow}`}></div>
+        <div className={`cta__arrow cta__arrow-down ${bg__color_arrow}`}></div>
+      </div>
+      
     </button>
   )
   

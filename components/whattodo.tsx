@@ -74,13 +74,13 @@ function WhatTodo() {
           });
         }, []);
   return (
-    <section id='Whattodo' className=' p-2 lg:p-0 container mx-auto mb-32'>
+    <section id='Whattodo' className='container p-2 mx-auto mb-32 lg:p-0'>
      <article className='my-10 lg:mt-0 md:mx-auto md:flex md:flex-col md:items-center lg:items-start' data-aos="fade-in">
           <h1>{data.title}</h1>
           <p className='md:text-center lg:text-left'>{data.text}</p>
-          <Button text={data.buttonText}/>
+          <Button bg__color_arrow='cta__bg-light' btnColor='btn__color-black' text={data.buttonText}/>
      </article>
-     <table className='whattodo-box mx-auto' data-aos="fade-up">
+     <table className='mx-auto whattodo-box' data-aos="fade-up">
      <thead className='p-1'>
           <tr className={`${data.box.backgroundColor} ${data.box.font} `}>
           <th className=''>{data.box.title}</th>

@@ -110,7 +110,7 @@ function Testimonials() {
     };
     return ( <> <section id='Testimonials' className='container mx-auto' data-aos="fade-in">
         <h1 className='my-20'>{data.title}</h1>
-        <Button text={data.buttonText}/>
+        <Button bg__color_arrow='cta__bg-light' btnColor='btn__color-black' text={data.buttonText}/>
         <div className='my-32'>
             <Slider {...settings}>
                 {reviewList > 0 && reviews.map(({
@@ -126,7 +126,7 @@ function Testimonials() {
             </Slider>
             
         </div>
-        <article className='__Testimonial-qoute pr-6 pl-6 my-32' data-aos="fade-up">
+        <article className='pl-6 pr-6 my-32 __Testimonial-qoute' data-aos="fade-up">
             <img src="/qoutes.svg" alt="" />
             <p>{data.quote.title}</p>
             <div className='__Testimonial-qoute-author'>{data.quote.author}</div>

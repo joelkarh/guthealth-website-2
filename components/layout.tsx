@@ -1,4 +1,5 @@
 import {ReactNode} from 'react'
+import Footer from './footer'
 import Navbar from './navbar'
 
 function Layout({children,}:{
@@ -12,7 +13,7 @@ function Layout({children,}:{
         <main className=''>
             {children}
         </main>
-        {/* {Footer} */}
+        <Footer/>
         </>
 
   )

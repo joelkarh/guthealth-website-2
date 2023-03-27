@@ -41,7 +41,7 @@ function Truths() {
       }, []);
     return ( 
     <div className='relative '> 
-    <section id='truth' className='mx-auto xl: z-10 relative'>
+    <section id='truth' className='relative z-10 mx-auto '>
         <article className='lg:container'>
             <div className='truth_article-img' data-aos="fade-in">
                 <Image alt='' width={692} height={919} src='/imagewithfilter.png' /> 
@@ -61,21 +61,21 @@ function Truths() {
                     ))}
             </div>
             <div className='mt-16'>
-            <Button text="Contact me"/>
+            <Button bg__color_arrow='cta__bg-light' btnColor='btn__color-black' text="Contact me"/>
             </div>
         </div>
         </article>
     </section> 
     {/* abolute is gone */}
-    <section  className=' truth-qoute mt-8 lg:mt-0 p-4 '>
+    <section  className='p-4 mt-8 truth-qoute lg:mt-0'>
             <article className='relative'  data-aos="fade-in">
-                <Image src={sun} alt="" width={275.5} height={162.5} className='sun hidden lg:block mr-4'/>
+                <Image src={sun} alt="" width={275.5} height={162.5} className='hidden mr-4 sun lg:block'/>
                 <Image src={qoute} alt='' width={51} height={36} className='my-8 '/>
                 <div className='qoute'>
                 <p className=''>
                 It &apos;s not the road taken but the road not taken that makes all the difference.
                 </p>
-                <span className='my-6 block'>Mark Twain : The Story of the Fox</span>
+                <span className='block my-6'>Mark Twain : The Story of the Fox</span>
                 </div>
                 
             </article>

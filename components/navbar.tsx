@@ -19,51 +19,51 @@ function Navbar() {
 
   return (
     <>
-    <div className='flex justify-between lg:pr-5 lg:pl-5 overflow-hidden'>
-      <Link href="/" className='pointer flex'>
+    <div className='container flex justify-between overflow-hidden lg:pr-5 lg:pl-5'>
+      <Link href="/" className='flex m-1 pointer'>
         <img src={'/logo_3.svg'} className={`${styles.Brand} `} alt=''/>
       </Link>
         <img onClick={showMenu} src={'/navbar.svg'} className={`${styles.Menu} ${menu? '':'bg-color-beige'} lg:hidden`} alt=''/>
         <nav className={`hidden navigation lg:flex`}>
-          <ul className='flex'>
+          <ul className='flex gap-5'>
             <li>
-              <Link href={`/`}>About me</Link>
+            <Link href={`/`}>Home</Link>
             </li>
             <li>
-              <Link href={`/`}>How does it works ?</Link>
+            <Link href={`/about`}>About</Link>
+            </li>
+            <li>
+            <Link href={`/`}>Services</Link>
             </li>
             <li>
               <Link href={`/`}>Contact</Link>
             </li>
-            <span className='line hidden lg:block'/>
-            <li className='arrow pointer'>
-              {/* <Link href={`/`}>Book a call</Link> */}
-              <Link href={`/`} className=''>
-              <div className='arrow-cta'>
-                <Button text="Book a call" /> 
-              </div>
-              </Link>
-            </li>
           </ul>
+          <div className='flex items-center justify-center ml-4'>
+          <Button bg__color_arrow='cta__bg-light' btnColor='btn__color-black' text="Book a call" /> 
+          </div>
+          
         </nav>
     </div>
 
-    <hr className='w-full border-solid border-1 border-black'/>
+    <hr className='w-full border-black border-solid border-1'/>
     <div className='relative lg:hidden'>
     <nav className={`${menu ? `hidden` : 'navigation-mobile-on '}   lg:flex h-auto px-2 py-8`}>
-          <ul className='flex flex-col  '>
-            <li className='my-2 p-4'>
-              <Link href={`/`}>About me</Link>
+          <ul className='flex flex-col '>
+            <li className='p-4 my-2'>
+              <Link href={`/`}>Home</Link>
             </li>
-            <li className='my-2 p-4'>
-              <Link href={`/`}>How does it works ?</Link>
+            <li className='p-4 my-2'>
+            <Link href={`/about`}>About</Link>
             </li>
-            <li className='my-2 p-4'>
+            <li>
+            <Link href={`/`}>Services</Link>
+            </li>
+            <li className='p-4 my-2'>
               <Link href={`/`}>Contact</Link>
             </li>
-            <span className='line hidden lg:block'/>
-            <Button text="let's call"/>
           </ul>
+          <Button bg__color_arrow='cta__bg-light' btnColor='btn__color-black' text="let's call"/>
         </nav>
     </div>
     {/* mobile -navbar */}

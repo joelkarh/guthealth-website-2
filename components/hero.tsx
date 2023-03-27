@@ -16,23 +16,23 @@ function Hero() {
         });
       }, []);
     return ( <> 
-    <section id='hero' className=' container px-4 flex flex-col xl:flex-row xl:pt-4'>
-        <div className='__name-box hidden xl:block xl:absolute'data-aos="fade-in" >
-            <span className='__name'>
+    <section id='hero' className='container flex flex-col px-4 lg:px-0 xl:flex-row xl:pt-4'>
+        <div className='hidden __name-box xl:block xl:absolute'data-aos="fade-in" >
+            <span className='__name' >
                 I&apos;m Romy Hugens
             </span>
             {/*  eslint-disable-next-line @next/next/no-img-element */}
             <img src="/Vector-arrow.svg" alt="" />
         </div>
-        <article className='my-14 mx-auto xl:mx-0 '  data-aos="fade-up">
-            <h1 className='font-semibold text-4xl	'>Transform your life and unleash your potential.</h1>
-            <p className='text-lg	font-normal	leading-7	my-8'>I&apos;ve helped thousands to
+        <article className='mx-auto my-14 xl:mx-0 '  data-aos="fade-up">
+            <h1 className='text-4xl font-semibold '>Transform your life and unleash your potential.</h1>
+            <p className='my-8 text-lg font-normal leading-7'>I&apos;ve helped thousands to
                 create more stable and sustainable life though my life coaching.
             </p>
-            <Button text="Let's call"/>
+            <Button bg__color_arrow='cta__bg-light' btnColor='btn__color-black' text="Let's call"/>
         </article>
-        <div className='__image relative xl:my-14 mx-auto xl:mx-0' data-aos="fade-in">
-            <Image src={hero_image} className='__image-img object-contain' alt=''/>
+        <div className='relative mx-auto __image xl:my-14 xl:mx-0' data-aos="fade-in">
+            
         </div>
     </section> 
     </>

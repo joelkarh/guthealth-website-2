@@ -34,7 +34,7 @@ html{
   scroll-behavior: smooth;
 }
 .bg__color-black{
-  background-color:#3E3F3E;
+  background-color:#333;
   a{
     color:$primary-bg;
   }
@@ -52,6 +52,7 @@ html{
 .color_p{
   border-color: $primary-font-color;
 }
+
 .color_s{
   color: $primary-bg;
 }

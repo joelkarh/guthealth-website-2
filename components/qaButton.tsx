@@ -11,7 +11,10 @@ export default function QaButton(props: { question: string, answer: string, open
     <div id='qaBtn' onClick={()=> setOpen(!open)}>
      <div className={`flex justify-between __qaBtn_question-box`} >
      <h2>{question}</h2>
-      <Image src="/downBtn.svg" alt="" priority={true} width={15} height={15} /> 
+      <Image src="/downBtn.svg"  style={{
+        width:  'auto',
+        height: 'auto'
+      }} alt="" priority={true} width={15} height={15} /> 
      </div>
       </div>
       <div className={`${open ? '__qaBtn_answer-box-checked': '__qaBtn_answer-box-none'} `}>

@@ -6,14 +6,23 @@ const Pillers = (props: { title: string; text: string; qoute: string; author: st
   return (
     <>
         <div className="hidden lg:block __Todo-border-animation __Todo-border">
-                <Image src={src} alt='' width={516} height={516}/>
+                <Image src={src} alt='' priority width={516} height={516}  style={{
+        width:  'auto',
+        height: 'auto'
+      }}/>
         </div>
         <div className='__Todo_box'>
         <h2 className='py-4'>{title}</h2>
         <p className='my-4'>{text}</p>
         <div className='relative flex justify-center my-2 __Todo_article-qoute'>
-            <Image src="/qoutes.svg" alt="" width={34} height={24} className='__Todo_article-qoute-qoute'/>
-            <Image src="/line.svg" alt="" width={331} height={0} className='__Todo_article-qoute-line' />
+            <Image src="/qoutes.svg" alt=""  style={{
+        width:  'auto',
+        height: 'auto'
+      }} width={34} height={24} className='__Todo_article-qoute-qoute'/>
+            <Image src="/line.svg"  style={{
+        width:  'auto',
+        height: 'auto'
+      }} alt="" width={331} height={0} className='__Todo_article-qoute-line' />
         </div>
         <blockquote className=''>
             {qoute}

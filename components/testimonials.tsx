@@ -110,7 +110,7 @@ function Testimonials() {
     };
     return ( <> <section id='Testimonials' className='container mx-auto' data-aos="fade-in">
         <h1 className='my-20'>{data.title}</h1>
-        <Button bg__color_arrow='cta__bg-light' btnColor='btn__color-black' text={data.buttonText}/>
+        <Button btnText='' bg__color_arrow='cta__bg-light' btnColor='btn__color-black' text={data.buttonText}/>
         <div className='my-32'>
             <Slider {...settings}>
                 {reviewList > 0 && reviews.map(({

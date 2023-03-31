@@ -53,7 +53,7 @@ export default function Qa() {
      }
              </section>
              <div className='qa__button ' data-aos="fade-up">
-             <Button bg__color_arrow='cta__bg-light' btnColor='btn__color-black' text='Get in touch'/>
+             <Button btnText='' bg__color_arrow='cta__bg-light' btnColor='btn__color-black' text='Get in touch'/>
              </div>
      </section>
      )

@@ -35,9 +35,9 @@ const About = ()=> {
                  </article>
             </section>
             <section className="py-4 lg:py-10 about__image lg:flex lg:justify-center lg:gap-14">
-                 <article className='about__image-1 'data-aos="fade-right">
+                 <article className='about__image-1 'data-aos="fade-up">
                  </article>
-                 <article className='py-4 about__image-2' data-aos="fade-left" >
+                 <article className='py-4 about__image-2' data-aos="fade-up" >
                  </article>
             </section>
             <ContactDark  bg__color_arrow={bg__color_arrow} title={contactCardTitle} description={contactCardText} img={imgSrc} buttonText={buttonText} btnColor={btnColor} />

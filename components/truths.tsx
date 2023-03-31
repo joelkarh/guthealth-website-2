@@ -61,7 +61,7 @@ function Truths() {
                     ))}
             </div>
             <div className='mt-16'>
-            <Button bg__color_arrow='cta__bg-light' btnColor='btn__color-black' text="Contact me"/>
+            <Button btnText='' bg__color_arrow='cta__bg-light' btnColor='btn__color-black' text="Contact me"/>
             </div>
         </div>
         </article>
@@ -69,7 +69,7 @@ function Truths() {
     {/* abolute is gone */}
     <section  className='p-4 mt-8 truth-qoute lg:mt-0'>
             <article className='relative'  data-aos="fade-in">
-                <Image src={sun} alt="" width={275.5} height={162.5} className='hidden mr-4 sun lg:block'/>
+                <Image src={sun} alt="" width={275.5} height={162.5}  className='hidden mr-4 sun lg:block'/>
                 <Image src={qoute} alt='' width={51} height={36} className='my-8 '/>
                 <div className='qoute'>
                 <p className=''>

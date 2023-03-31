@@ -78,7 +78,7 @@ function WhatTodo() {
      <article className='my-10 lg:mt-0 md:mx-auto md:flex md:flex-col md:items-center lg:items-start' data-aos="fade-in">
           <h1>{data.title}</h1>
           <p className='md:text-center lg:text-left'>{data.text}</p>
-          <Button bg__color_arrow='cta__bg-light' btnColor='btn__color-black' text={data.buttonText}/>
+          <Button btnText='' bg__color_arrow='cta__bg-light' btnColor='btn__color-black' text={data.buttonText}/>
      </article>
      <table className='mx-auto whattodo-box' data-aos="fade-up">
      <thead className='p-1'>

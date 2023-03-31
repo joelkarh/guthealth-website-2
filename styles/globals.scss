@@ -32,13 +32,28 @@ $baskerville-color: #efeee8;
 $bg-color: #e4e2d3;
 html{
   scroll-behavior: smooth;
-  color:$primary-font-color;
+}
+.bg__color-black{
+  background-color:#3E3F3E;
+  a{
+    color:$primary-bg;
+  }
+  color: $primary-bg;
 }
 .primary-bg {
   background-color: $primary-bg;
+  a{
+    color: $primary-font-color;   
+  }
 }
 .bg-color-beige {
   background-color: #e4e2d3;
+}
+.color_p{
+  border-color: $primary-font-color;
+}
+.color_s{
+  color: $primary-bg;
 }
 * {
   padding: 0;
@@ -85,6 +100,7 @@ h1 {
 .navigation-mobile-on {
   background-color: #e4e2d3;
   position: absolute;
+  z-index: 20;
   display: block;
   top: 0;
   left: 0;
@@ -104,6 +120,7 @@ h1 {
   }
 }
 
+
 .__name-box {
   max-width: 344px;
   max-height: 162px;
@@ -116,23 +133,17 @@ h1 {
 #CTA {
   span{
     display: block;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;;
   }
-  display: -webkit-box;
   display: -webkit-flex;
-  display: -ms-flexbox;
   font-size: 1.125rem;
   display: flex;
   height: 48px;
   padding-right: 24px;
   padding-left: 24px;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
   font-family: Oxygen, sans-serif;
   text-decoration: none;
@@ -157,12 +168,9 @@ h1 {
   top: 0%;
   right: 0%;
   bottom: 0%;
-  -webkit-transform-origin: 100% 50%;
-  -ms-transform-origin: 100% 50%;
   transform-origin: 100% 50%;
 }
 #CTA:hover{
-  
   .cta__wrap{
     transition: all 400ms ease;
     transform: translate3d(4px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
@@ -177,6 +185,18 @@ h1 {
     transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg)  rotateZ(-35deg) skew(0deg, 0deg);;
   }
 
+}
+// opposite of hover
+#CTA:not(:hover){
+  .cta__wrap{
+    transition: all 400ms ease;
+  }
+  .cta__arrow-up{
+    transition: all 400ms ease;
+  }
+.cta__arrow-down{
+  transition: all 400ms ease;
+}
 }
 .cta__arrow-up{
   transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
@@ -378,14 +398,29 @@ h1 {
   .sun {
     padding: 2rem 0;
     margin-left: 70%;
-    animation-name: sunTurning;
-    animation-duration: 6000ms; 
-    animation-timing-function: ease-in-out; 
-    animation-delay: 1000ms;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
+    -webkit-animation-name: sunTurning;
+            animation-name: sunTurning;
+    -webkit-animation-duration: 6000ms;
+            animation-duration: 6000ms; 
+    -webkit-animation-timing-function: ease-in-out; 
+            animation-timing-function: ease-in-out; 
+    -webkit-animation-delay: 1000ms; 
+            animation-delay: 1000ms;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
 
     // animation-play-state: running;
+  }
+  @-webkit-keyframes sunTurning {
+    0%{
+      transform: rotate(0deg);
+
+    }
+    100%{
+      transform: rotate(360deg);
+    }
   }
   @keyframes sunTurning {
     0%{
@@ -534,7 +569,8 @@ h1 {
     display: none;
   }
   .__Testimonial_card-img {
-    clip-path: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
     margin-left: 1rem;
 
     width: 64px;
@@ -686,12 +722,18 @@ h1 {
   padding: 1.5rem;
 }
 .sun{
-  animation-name: sunTurning;
-  animation-duration: 6000ms; 
-  animation-timing-function: ease-in-out; 
-  animation-delay: 1000ms;
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
+  -webkit-animation-name: sunTurning;
+          animation-name: sunTurning;
+  -webkit-animation-duration: 6000ms;
+          animation-duration: 6000ms; 
+  -webkit-animation-timing-function: ease-in-out; 
+          animation-timing-function: ease-in-out; 
+  -webkit-animation-delay: 1000ms; 
+          animation-delay: 1000ms;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 .about__image-1{
   position: relative;
@@ -908,10 +950,7 @@ h1 {
       text-align: left;
     }
   }
-  #CTA {
-    
-    
-  }
+
   #__goals {
     position: relative;
     padding: 4.5rem;
@@ -1033,11 +1072,21 @@ h1 {
         font-size: 1.125rem;
       }
       .__Todo-border-animation{
-        animation-name: fadeIn;
-        animation-duration: 2000ms;
+        -webkit-animation-name: fadeIn;
+                animation-name: fadeIn;
+        -webkit-animation-duration: 2000ms;
+                animation-duration: 2000ms;
         
       }
       //
+      @-webkit-keyframes fadeIn {
+        0%{
+          opacity:.1;
+        }
+        100%{
+          opacity: 1;
+        }
+      }
       @keyframes fadeIn {
         0%{
           opacity:.1;

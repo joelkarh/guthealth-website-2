@@ -29,7 +29,7 @@ function Hero() {
             <p className='my-8 text-lg font-normal leading-7'>I&apos;ve helped thousands to
                 create more stable and sustainable life though my life coaching.
             </p>
-            <Button bg__color_arrow='cta__bg-light' btnColor='btn__color-black' text="Let's call"/>
+            <Button btnText='' bg__color_arrow='cta__bg-light' btnColor='btn__color-black' text="Let's call"/>
         </article>
         <div className='relative mx-auto __image xl:my-14 xl:mx-0' data-aos="fade-in">
             

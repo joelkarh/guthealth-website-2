@@ -52,12 +52,12 @@ const TODO = () => {
     const dataList = data.pillers
     return ( 
     <> 
-    <section id="Todo" className=" mb-24 lg:m-24" data-aos="fade-up">
+    <section id="Todo" className="mb-24  lg:m-24" data-aos="fade-up">
         <h1>{data.title}</h1>
         <p>
             {data.description}
         </p>
-        <div className="__Todo_btn-box flex items-center">
+        <div className="flex items-center __Todo_btn-box">
             {dataList.map(({
                 title,
             }, index) => (
@@ -81,8 +81,7 @@ const TODO = () => {
                 text={description}
                 qoute={qoute}
                 author={author}
-                        src={src}
-                        
+                src={src}
                 />
             </article>
         )}

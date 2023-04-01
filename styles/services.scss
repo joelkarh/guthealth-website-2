@@ -54,3 +54,15 @@ $oxygen: "oxygen", sans-serif;
           }
      }
 }
+
+@media (min-width: 1280px){
+    .second__category{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-column-gap: 32px;
+        grid-row-gap: 32px;
+        -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    
+}
+}

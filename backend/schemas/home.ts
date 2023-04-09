@@ -1,5 +1,3 @@
-import {type} from "os";
-import {title} from "process";
 
 // schemas/home.ts
 export default {
@@ -12,7 +10,6 @@ export default {
             type: 'string',
             title: 'Hero Title',
             description: 'Enter the hero title'
-
         }, {
             name: 'hero_subtitle',
             type: 'string',
@@ -35,23 +32,18 @@ export default {
         }, {
             name: 'section',
             type: 'object',
-            fieldsets: [
-                {
-                    name: 'section_2',
-                    title: 'section'
-                }
-            ],
+            title:'Section',
             fields: [
                 {
                     name: 'section_title',
                     type: 'string',
                     title: 'Title',
-                    fieldset: 'section_2'
+                   
                 }, {
                     name: 'section_subtitle',
                     type: 'string',
                     title: 'Subtitle',
-                    fieldset: 'section_2'
+                    
                 }
             ]
         }, {
@@ -374,11 +366,14 @@ export default {
                    },
                    {
                         name: 'review',
-                        type: 'string',
-                        title: 'Review',
-                        fieldset:'testimonials'
+                        type: 'array',
+                        title: 'Reviews',
+                        of: [{type: 'reviews'}]
                    }
               ]
          }
-    ]
+     ],
+     initialValue: {
+          isHighlighted: false
+        }
 }

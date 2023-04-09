@@ -1,0 +1,123 @@
+@font-face {
+    font-family: "Reenie";
+    src: url("./mainFont/Reenie_Beanie/ReenieBeanie-Regular.ttf");
+}
+$primary-font-color: #333;
+$primary-bg: #efeee8;
+$oxygen: "oxygen", sans-serif;
+.btn__contact-transparent {
+     background-color: transparent;
+ 
+ }
+ .btn__text-black {
+     color: $primary-font-color;
+ }
+ .btn__text-white {
+     color: $primary-bg;
+ }
+ .btn__contact-dark {
+     background-color: $primary-font-color;
+ 
+ }
+ .bg__arrow-white {
+     background-color: $primary-bg;
+ }
+ .bg__arrow-black {
+     background-color: $primary-font-color;
+ }
+ .bg__black{
+     background-color: #333;
+ }
+.contact__img {
+    max-height: 617px;
+    max-width: 545px;
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+    &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        background-image: url('/filter.png');
+    }
+}
+.img__box {
+    position: absolute;
+    left: 1rem;
+    right: 1rem;
+    z-index: 15;
+    bottom: 1rem;
+    background-color: #333333;
+    max-width: 497px;
+    p, span{
+     color: #EFEEE8;
+    }
+    p {
+        font-family: "Baskerville", sans-serif;
+        font-size: 1rem;
+        font-weight: 400;
+        font-style: normal;
+        padding: 24px;
+    }
+    span {
+        padding: 0 155px 24px 24px;
+        
+        font-family: "Reenie", sans-serif;
+        font-size: 2rem;
+        font-weight: 400;
+        font-style: normal;
+        display: block;
+    }
+
+}
+
+
+
+input[type=text]{
+     font-family: "Baskerville";
+     font-size: 1.125rem;
+     font-weight: 400;
+     border-bottom: 1px solid  #333333;
+     background-color: transparent;
+     font-size: 1.125rem;
+     color: #333333;
+     Opacity: 70%;
+     padding: 16px 16px 16px 0;
+     border-radius: 0;
+     margin-bottom: 1rem;
+}
+input[type=text]:focus{
+     outline: none;
+}
+
+button{
+     background-color: #333333;
+}
+@media (min-width: 768px) {
+    .img__box {
+        p {
+           
+            line-height: 29px;
+            letter-spacing: 0;
+            text-align: left;
+        }
+        span {
+            font-family: "Reenie",monospace,sans-serif;
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 34px;
+            letter-spacing: 0;
+            text-align: left;
+        }
+    }
+
+   
+}
+
+@media (min-width: 1280px){
+     input[type=text]{
+          width: 535px;
+     }
+}

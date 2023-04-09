@@ -1,5 +1,6 @@
 import '../styles/globals.scss'
-import'../styles/services.scss'
+import '../styles/services.scss'
+import'../styles/contact.scss'
 import '../styles/__slick-theme.scss'
 import '../styles/__slickscss.scss'
 import type { AppProps } from 'next/app'

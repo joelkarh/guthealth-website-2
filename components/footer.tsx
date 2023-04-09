@@ -21,8 +21,9 @@ function Footer() {
                  <ul data-aos="fade-in" className='flex gap-4 py-4 mx-auto my-2 font-bold lg:mx-0 lg:justify-between'>
                       <li><Link  href='/'>Home</Link></li>
                       <li><Link href='/about'>About</Link></li>
-                      <li><Link  href='/'>Services</Link></li>
-                      <li><Link  href='/'>Contact</Link></li>
+                      <li><Link  href='/services'>Services</Link></li>
+                              <li><Link href='/contact'>Contact</Link></li>
+                              <li><Link  href='/'>Login</Link></li>
                  </ul>
             </section>
                </section>

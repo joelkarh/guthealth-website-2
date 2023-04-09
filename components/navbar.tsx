@@ -36,7 +36,7 @@ function Navbar(props:{Header__bg:string, btncolor:string,arrowColor:string, log
             <Link href={`/services`}>Services</Link>
             </li>
             <li>
-              <Link href={`/`}>Contact</Link>
+              <Link href={`/contact`}>Contact</Link>
             </li>
           </ul>
           <div className='flex items-center justify-center ml-4'>
@@ -58,7 +58,7 @@ function Navbar(props:{Header__bg:string, btncolor:string,arrowColor:string, log
             <Link href={`/services`}>Services</Link>
             </li>
             <li className='p-4 my-2'>
-              <Link href={`/`}>Contact</Link>
+              <Link href={`/contact`}>Contact</Link>
             </li>
           </ul>
           <Button btnText={btnText } bg__color_arrow={arrowColor} btnColor={btncolor} text="let's call"/>

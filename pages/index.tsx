@@ -9,7 +9,7 @@ import WhatTodo from '../components/whattodo'
 import Qa from '../components/qa'
 import {client} from '../variables'
 import { useNextSanityImage } from 'next-sanity-image'
-import imageUrlBuilder from '@sanity/image-url'
+
 import { myCustomImagebuilder } from '../imageBuilder'
 
 type hero = {

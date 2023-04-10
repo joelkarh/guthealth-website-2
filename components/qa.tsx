@@ -31,22 +31,26 @@ const data = {
 }
 
 export default function Qa() {
+    const{subtitle, title} = data
 
     return (
-        <section id='qa' className='mx-auto' data-aos="fade-in">
+        <section id='qa' className='px-4 mx-auto' data-aos="fade-in">
             <article className='text-center'>
-                <h1 className='text-2xl'>{data.title}</h1>
-                <p>{data.subtitle}</p>
+                <h1 className=''>{title}</h1>
+                <p>{subtitle}</p>
             </article>
             <section className='px-4 qa__section' data-aos="fade-up">
-
+                <article className='border border-[#333] divide-y qa__box divide-[#333] mx-auto'>
                 {data
                     .questions
                     .map(({
                         question,
                         answer
-                    }, i) => (<QaButton key={i} question={question} answer={answer}/>))
-}
+                    }, i) => (
+                        <QaButton key={i} question={question} answer={answer} />
+                    ))
+                    }
+                    </article>
                 <div className='qa__button '>
                     <Button
                         btnText=''

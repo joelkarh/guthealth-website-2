@@ -657,9 +657,12 @@ h1 {
   }
 }
 #qa {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  margin-top: 64px;
+  margin-bottom: 64px;
   background-color: $bg-color;
+  color: $primary-font-color;
   cursor: pointer;
   .qa__button {
     button {
@@ -668,12 +671,17 @@ h1 {
   }
   h1 {
     margin-bottom: 1rem;
+    font-size: 1.75rem;
+    font-family: $baskerBold;
+    line-height: 120%;
+  }
+  p{
+    font-size: 1.125rem;
+    line-height: 152%;
   }
   #qaBtn {
-    border: 1px solid #333333;
-    margin: auto;
-    max-width: 425px;
-    height: 67px;
+    
+    max-width: 890px;
 
     .__qaBtn_question-box {
       display: flex;
@@ -681,10 +689,10 @@ h1 {
       align-items: center;
       padding: 24px;
       h2 {
-        font-family: $baskerville;
-        font-weight: 400;
-        font-size: 1rem;
-        line-height: 1.19rem;
+        font-family: $baskerBold;
+        font-weight: 700;
+        font-size: 1.125rem;
+        line-height: 130%;
       }
     }
   }
@@ -692,18 +700,20 @@ h1 {
     display: none;
   }
 }
+.qa__box{
+  max-width: 890px;
+}
 .__qaBtn_answer-box-checked {
   display: block;
-  border: 1px solid #333333;
-  margin: auto;
-  max-width: 425px;
-  height: 67px;
+  
+  
+
   p {
     padding: 24px;
   }
 }
 .qa__section {
-  margin-top: 1.5rem;
+  margin-top: 64px;
 }
 //footer
 .footer__socials > img {
@@ -1153,12 +1163,17 @@ h1 {
       }
     }
   }
-  #qa {
-    #qaBtn {
-      max-width: 890px;
+  #qa{
+    h1{
+      font-size: 2.25rem;
     }
-    .__qaBtn_answer-box-checked {
-      max-width: 890px;
+    &>p{
+      font-size: 1.25rem;
+    }
+  }
+  #qaBtn{
+    h2{
+      font-size: 1.25rem;
     }
   }
   .footer{
@@ -1170,6 +1185,14 @@ h1 {
 }
 //
 @media (min-width: 1440px) {
+  #qa{
+    h1{
+      font-size: 2.5rem;
+    }
+    &>p{
+      font-size: 1.375rem;
+    }
+  }
 }
 //
 @media (min-width: 2560px) {

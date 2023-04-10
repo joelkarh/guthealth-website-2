@@ -5,29 +5,16 @@
 $primary-font-color: #333;
 $primary-bg: #efeee8;
 $oxygen: "oxygen", sans-serif;
-.btn__contact-transparent {
-     background-color: transparent;
- 
- }
- .btn__text-black {
-     color: $primary-font-color;
- }
- .btn__text-white {
-     color: $primary-bg;
- }
- .btn__contact-dark {
-     background-color: $primary-font-color;
- 
- }
- .bg__arrow-white {
-     background-color: $primary-bg;
- }
- .bg__arrow-black {
-     background-color: $primary-font-color;
- }
- .bg__black{
-     background-color: #333;
- }
+.btn__submit{
+    width: 100%;
+    background-color: #333333;
+    color:#EFEEE8;
+    height: 52px;
+    transition: opacity 200ms ease;
+    text-align: center;
+    transition: opacity 200ms ease;
+    text-align: center;
+}
 .contact__img {
     max-height: 617px;
     max-width: 545px;
@@ -75,7 +62,7 @@ $oxygen: "oxygen", sans-serif;
 
 
 
-input[type=text]{
+input{
      font-family: "Baskerville";
      font-size: 1.125rem;
      font-weight: 400;

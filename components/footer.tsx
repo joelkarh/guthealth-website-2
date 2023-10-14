@@ -46,7 +46,7 @@ function Footer() {
                 </li>
             </ul>
         </section>
-    </section> < section className = "text-center footer__banner " > <p>This website is developed with ❤️
+    </section> < section className = "text-center footer__banner " > <p>This website is developed with ❤️ {" "}
         <span>
             <Link href="https://karhamba.be/">by Karhamba</Link>
         </span>

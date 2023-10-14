@@ -78,7 +78,7 @@ export default function Services() {
                     </div>
                 </article>
                 <section className='container mx-auto m-[-200px] '>
-                    <section className='flex flex-col items-center gap-6 sm:gap-8 lg:flex-row' data-aos="fade-up">
+                    <section className='flex flex-col items-center gap-6 sm:gap-8 lg:flex-row' >
                         {categories.length > 0 && categories.map(({
                             title,
                             calls,

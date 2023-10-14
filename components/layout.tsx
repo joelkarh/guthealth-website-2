@@ -1,4 +1,4 @@
-import {ReactNode} from 'react'
+import { ReactNode } from 'react'
 import Footer from './footer'
 import Navbar from './navbar'
 const layout_color = {
@@ -7,22 +7,21 @@ const layout_color = {
   btnColor: 'cta__bg-dark',
   arrowColor: 'cta__bg-light',
   btnText: 'color_s',
-  borderColor:'color_p'
-  
-}
-function Layout({children,}:{
-    children: React.ReactNode,
-}) {
-  const {header_backgroundColor, logo, arrowColor, btnColor, btnText, borderColor} = layout_color
-  return (
-        <>
-      <Navbar borderColor={borderColor} btnText={btnText} Header__bg={header_backgroundColor} arrowColor={arrowColor} logo={logo} btncolor={btnColor} />
-        <main className=''>
-            {children}
-        </main>
-        <Footer/>
-        </>
+  borderColor: 'color_p'
 
+}
+function Layout({ children, }: {
+  children: React.ReactNode,
+}) {
+  const { header_backgroundColor, logo, arrowColor, btnColor, btnText, borderColor } = layout_color
+  return (
+    <>
+      <Navbar borderColor={borderColor} btnText={btnText} Header__bg={header_backgroundColor} arrowColor={arrowColor} logo={logo} btncolor={btnColor} />
+      <main className=''>
+        {children}
+      </main>
+      <Footer />
+    </>
   )
 }
 

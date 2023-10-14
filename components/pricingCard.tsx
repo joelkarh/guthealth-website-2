@@ -1,5 +1,3 @@
-import {type} from "os"
-import Button from "./button"
 import ButtonServices from "./buttonServices"
 type pricingType = {
     Title: string,
@@ -22,15 +20,14 @@ function PricingCard({
     bgColorArrow,
     btnText
 } : pricingType) {
-
+    // data-aos="fade-up"
     return (
-        <article
-            className="bg-[#E4E2D3] w-full max-w-[343px] sm:max-w-[429px] p-6 flex justify-center flex-col border border-solid border-[#3333] shadow-lg   ">
+        <article 
+            className="bg-[#E4E2D3] w-full max-w-[343px] sm:max-w-[429px] p-6 flex justify-center flex-col border border-solid border-[#3333] shadow-lg " >
             <div className="">
                 <h3 className=" font-['Baskerville'] font-semibold text-2xl py-3">{Title}</h3>
                 <h4 className="font-['oxygen'] font-bold text-lg py-3 uppercase">includes</h4>
             </div>
-
             <ul className="services__list">
                 <li>{Calls}</li>
                 <li>{Advice}</li>

@@ -2,6 +2,7 @@ import Head from 'next/head'
 import {useEffect} from 'react'
 import ContactDark from '../components/contactDark'
 import Layout from '../components/layout'
+import {motion as m } from 'framer-motion'
 import AOS from "aos";
 import "aos/dist/aos.css";
 const data = {
@@ -27,10 +28,11 @@ const About = ()=> {
      <Layout>
           <Head>
           <title className='text-[#333]'>About me - Romy Hugens</title>
-          </Head>
+            </Head>
+            <m.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} >
           <section className='my-6 lg:my-24 about' >
                  <article  className='container px-4 pt-20 mx-auto lg:text-center min-w-xs about__article'>
-                      <h1 data-aos="fade-up" className='pb-4 lg:pb-6 text-4xl lg:mx-auto font-semibold lg:text-[4.9rem] lg:leading-[5.25rem] max-w-[47.25rem] whitespace-pre-line'>{title}</h1>
+                      <h1 data-aos="fade-up" className='pb-4 lg:pb-6 text-4xl lg:mx-auto font-semibold lg:text-[4.9rem] lg:leading-[5.25rem] max-w-[47.25rem] opacity-75 whitespace-pre-line'>{title}</h1>
                       <p data-aos="fade-up" className='text-lg lg:mx-auto lg:text-[1.5rem] max-w-[41.25rem] lg:leading-[2.5rem] '>{subtext}</p>
                  </article>
             </section>
@@ -40,7 +42,8 @@ const About = ()=> {
                  <article className='py-4 about__image-2' data-aos="fade-up" >
                  </article>
             </section>
-            <ContactDark  bg__color_arrow={bg__color_arrow} title={contactCardTitle} description={contactCardText} img={imgSrc} buttonText={buttonText} btnColor={btnColor} />
+                 <ContactDark bg__color_arrow={bg__color_arrow} title={contactCardTitle} description={contactCardText} img={imgSrc} buttonText={buttonText} btnColor={btnColor} />
+                 </m.div>
     </Layout>
   )
 }

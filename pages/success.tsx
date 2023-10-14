@@ -16,7 +16,7 @@ function Success() {
                  <p className='text-lg lg:text-xl  text-[#333] font-["Baskerville"]'>I&apos;ll get back to you as soon as possible</p>
                     </section>
                </m.main>
-               <Confetti gravity={.1} />
+               {/* <Confetti gravity={.1} /> */}
           </Layout>
               
   )

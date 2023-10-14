@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import {useEffect} from 'react'
+import { useEffect } from 'react'
 import Button from './button'
 import TestimonialCard from './testimonialcard'
 import Slider from "react-slick";
@@ -17,54 +17,54 @@ const data = {
             job: 'Agency Owner',
             img: '/hero_image.jpg',
             text: 'Working with Maria was an absolutely life changing. I finally made a good life w' +
-                    'ork balance, took my business of the ground while keeping healthy relationship w' +
-                    'ith my friends and family.'
+                'ork balance, took my business of the ground while keeping healthy relationship w' +
+                'ith my friends and family.'
         }, {
             id: 1,
             name: 'Johanna Jackson',
             job: 'Agency Owner',
             img: '/hero_image.jpg',
             text: 'Working with Maria was an absolutely life changing. I finally made a good life w' +
-                    'ork balance, took my business of the ground while keeping healthy relationship w' +
-                    'ith my friends and family.'
+                'ork balance, took my business of the ground while keeping healthy relationship w' +
+                'ith my friends and family.'
         }, {
             id: 2,
             name: 'Johanna Jackson',
             job: 'Agency Owner',
             img: '/hero_image.jpg',
             text: 'Working with Maria was an absolutely life changing. I finally made a good life w' +
-                    'ork balance, took my business of the ground while keeping healthy relationship w' +
-                    'ith my friends and family.'
+                'ork balance, took my business of the ground while keeping healthy relationship w' +
+                'ith my friends and family.'
         }, {
             id: 3,
             name: 'Johanna Jackson',
             job: 'Agency Owner',
             img: '/hero_image.jpg',
             text: 'Working with Maria was an absolutely life changing. I finally made a good life w' +
-                    'ork balance, took my business of the ground while keeping healthy relationship w' +
-                    'ith my friends and family.'
+                'ork balance, took my business of the ground while keeping healthy relationship w' +
+                'ith my friends and family.'
         }, {
             id: 4,
             name: 'Johanna Jackson',
             job: 'Agency Owner',
             img: '/hero_image.jpg',
             text: 'Working with Maria was an absolutely life changing. I finally made a good life w' +
-                    'ork balance, took my business of the ground while keeping healthy relationship w' +
-                    'ith my friends and family.'
+                'ork balance, took my business of the ground while keeping healthy relationship w' +
+                'ith my friends and family.'
         }, {
             id: 5,
             name: 'Johanna Jackson',
             job: 'Agency Owner',
             img: '/hero_image.jpg',
             text: 'Working with Maria was an absolutely life changing. I finally made a good life w' +
-                    'ork balance, took my business of the ground while keeping healthy relationship w' +
-                    'ith my friends and family.'
+                'ork balance, took my business of the ground while keeping healthy relationship w' +
+                'ith my friends and family.'
         }
     ],
     quote:
-        {
-            title:'Life shoulld not only be lived ' + 'it should be celebrated',
-        author:'Mark Twain : The Story of the Fox',
+    {
+        title: 'Life shoulld not only be lived ' + 'it should be celebrated',
+        author: 'Mark Twain : The Story of the Fox',
     }
 }
 function Testimonials() {
@@ -73,7 +73,7 @@ function Testimonials() {
             delay: 200, // values from 0 to 3000, with step 50ms
             duration: 3000, // values from 0 to 3000, with step 50ms
         });
-      }, []);
+    }, []);
     const reviews = data.people
     const reviewList = data.people.length
     const settings = {
@@ -108,9 +108,9 @@ function Testimonials() {
             }
         ]
     };
-    return ( <> <section id='Testimonials' className='container mx-auto' data-aos="fade-in">
+    return (<> <section id='Testimonials' className='container mx-auto' data-aos="fade-in">
         <h1 className='my-20'>{data.title}</h1>
-        <Button btnText='' bg__color_arrow='cta__bg-light' btnColor='btn__color-black' text={data.buttonText}/>
+        <Button btnText='' bg__color_arrow='cta__bg-light' btnColor='btn__color-black' text={data.buttonText} />
         <div className='my-32'>
             <Slider {...settings}>
                 {reviewList > 0 && reviews.map(({
@@ -119,21 +119,20 @@ function Testimonials() {
                     img
                 }, i) => (
                     <article key={i} className='__Testimonial_card-box'>
-                        <TestimonialCard name={name} text={text} img={img}/>
+                        <TestimonialCard name={name} text={text} img={img} />
                     </article>
                 ))
-}
+                }
             </Slider>
-            
         </div>
         <article className='pl-6 pr-6 my-32 __Testimonial-qoute' data-aos="fade-up">
             <img src="/qoutes.svg" alt="" />
             <p>{data.quote.title}</p>
             <div className='__Testimonial-qoute-author'>{data.quote.author}</div>
         </article>
-    </section> 
+    </section>
     </>
-  )
+    )
 }
 
 export default Testimonials
